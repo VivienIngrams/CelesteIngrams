@@ -14,11 +14,11 @@ const Navbar: React.FC = () => {
   return (
     <>
       <nav
-        className={`fixed w-full h-20 flex  justify-end p-4 text-lg xl:text-2xl font-ubuntu text-neutral-500 z-[100] border-b-2 border-neutral-300`}
+        className={`fixed w-full h-20 flex  justify-end p-4  z-[100] border-b-2 border-neutral-300`}
       >
         {/* Desktop nav */}
         <div className="h-full fixed top-6 left-10">
-          <Link className="hover:border-b" href="/" onClick={handleNav}>
+          <Link className="hover:border-b" href="/" >
             Celeste Ingrams
           </Link>
         </div>
@@ -26,28 +26,28 @@ const Navbar: React.FC = () => {
           <div>
             <ul className="hidden lg:flex">
               <Link href="/about">
-                <li className=" ml-10 hover:border-b" onClick={handleNav}>
+                <li className=" ml-10 hover:border-b" >
                   About
                 </li>
               </Link>
               <Link href="/practice">
-                <li className=" ml-10 hover:border-b" onClick={handleNav}>
+                <li className=" ml-10 hover:border-b" >
                   Practice
                 </li>
               </Link>
               <Link href="/critical-exchange">
-                <li className=" ml-10 hover:border-b" onClick={handleNav}>
+                <li className=" ml-10 hover:border-b" >
                   Critical Exchange
                 </li>
               </Link>
               <Link href="/workshops">
-                <li className=" ml-10 hover:border-b" onClick={handleNav}>
+                <li className=" ml-10 hover:border-b" >
                   Workshops
                 </li>
               </Link>
-              <Link href="/#contact">
-                <li className=" mx-10 hover:border-b" onClick={handleNav}>
-                  Contacto
+              <Link href="/contact">
+                <li className=" mx-10 hover:border-b" >
+                  Contact
                 </li>
               </Link>
             </ul>
@@ -104,9 +104,9 @@ const Navbar: React.FC = () => {
                   Workshops
                 </li>
               </Link>
-              <Link href="/#contact">
+              <Link href="/contact">
                 <li className="py-5 hover:border-b" onClick={handleNav}>
-                  Contacto
+                  Contact
                 </li>
               </Link>
             </ul>
