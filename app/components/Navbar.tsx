@@ -1,19 +1,12 @@
 "use client";
-import { useState, useEffect } from "react";
-import Image from "next/image";
+import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // Import useRouter
 
 import { AiOutlineClose } from "react-icons/ai";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 
 const Navbar: React.FC = () => {
   const [nav, setNav] = useState(false);
-  const [navBg, setNavBg] = useState("transparent");
-  const [textColor, setTextColor] = useState("text-cyan-700"); // Add pathname to the Navbar component
-  const path = usePathname();
-
-
   const handleNav = () => {
     setNav(!nav);
   };
@@ -21,11 +14,15 @@ const Navbar: React.FC = () => {
   return (
     <>
       <nav
-        
-        className={`fixed w-full h-100 p-4 text-lg xl:text-xl font-ubuntu uppercase tracking-tight font-light text-neutral-700 z-[100]`}
+        className={`fixed w-full h-20 flex  justify-end p-4 text-lg xl:text-2xl font-ubuntu text-neutral-500 z-[100] border-b-2 border-neutral-300`}
       >
         {/* Desktop nav */}
-        <div className="relative flex justify-center items-center w-full h-full 2xl:px-16">
+        <div className="h-full fixed top-6 left-10">
+          <Link className="hover:border-b" href="/" onClick={handleNav}>
+            Celeste Ingrams
+          </Link>
+        </div>
+        <div className="relative flex items-center h-full">
           <div>
             <ul className="hidden lg:flex">
               <Link href="/about">
@@ -49,7 +46,7 @@ const Navbar: React.FC = () => {
                 </li>
               </Link>
               <Link href="/#contact">
-                <li className=" ml-10 hover:border-b" onClick={handleNav}>
+                <li className=" mx-10 hover:border-b" onClick={handleNav}>
                   Contacto
                 </li>
               </Link>
@@ -61,8 +58,7 @@ const Navbar: React.FC = () => {
         <div>
           <HiOutlineMenuAlt1
             size={25}
-            color={textColor}
-            onClick={handleNav}
+                       onClick={handleNav}
             className="lg:hidden "
           />
         </div>
