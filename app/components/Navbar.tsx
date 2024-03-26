@@ -26,27 +26,27 @@ const Navbar: React.FC = () => {
           <div>
             <ul className="hidden lg:flex">
               <Link href="/about">
-                <li className=" ml-10 hover:border-b" >
+                <li className=" ml-10 hover:border-b hover:text-blue-300" >
                   About
                 </li>
               </Link>
               <Link href="/practice">
-                <li className=" ml-10 hover:border-b" >
+                <li className=" ml-10 hover:border-b hover:text-blue-300" >
                   Practice
                 </li>
               </Link>
               <Link href="/critical-exchange">
-                <li className=" ml-10 hover:border-b" >
+                <li className=" ml-10 hover:border-b hover:text-blue-300" >
                   Critical Exchange
                 </li>
               </Link>
               <Link href="/workshops">
-                <li className=" ml-10 hover:border-b" >
+                <li className=" ml-10 hover:border-b hover:text-blue-300" >
                   Workshops
                 </li>
               </Link>
               <Link href="/contact">
-                <li className=" mx-10 hover:border-b" >
+                <li className=" mx-10 hover:border-b hover:text-blue-300" >
                   Contact
                 </li>
               </Link>
@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
         >
           <div className="w-full">
             <div className="relative flex w-full items-center justify-between z-200">
-              <Link href="/" onClick={handleNav}>
+              <Link className="py-5 hover:border-b hover:text-blue-300" href="/" onClick={handleNav}>
                 Celeste Ingrams
               </Link>
               <div
@@ -85,27 +85,27 @@ const Navbar: React.FC = () => {
           <div className="p-5 flex-col mt-4 text-center">
             <ul>
               <Link href="/about">
-                <li className="py-5 hover:border-b" onClick={handleNav}>
+                <li className="py-5 hover:border-b hover:text-blue-300" onClick={handleNav}>
                   About
                 </li>
               </Link>
               <Link href="/practice">
-                <li className="py-5 hover:border-b" onClick={handleNav}>
+                <li className="py-5 hover:border-b hover:text-blue-300" onClick={handleNav}>
                   Practice
                 </li>
               </Link>
               <Link href="/critical-exchange">
-                <li className="py-5 hover:border-b" onClick={handleNav}>
+                <li className="py-5 hover:border-b hover:text-blue-300" onClick={handleNav}>
                   Critical Exchange
                 </li>
               </Link>
               <Link href="/workshops">
-                <li className="py-5 hover:border-b" onClick={handleNav}>
+                <li className="py-5 hover:border-b hover:text-blue-300" onClick={handleNav}>
                   Workshops
                 </li>
               </Link>
               <Link href="/contact">
-                <li className="py-5 hover:border-b" onClick={handleNav}>
+                <li className="py-5 hover:border-b hover:text-blue-300" onClick={handleNav}>
                   Contact
                 </li>
               </Link>
