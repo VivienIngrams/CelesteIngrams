@@ -61,7 +61,7 @@ const Workshops = () => {
           </ul>
           <p className="py-6 xl:py-12">Please get in touch if you’d like to discuss a proposal with me.</p>
           <div>
-            <Link className="underline hover:text-blue-300" href="mailto:ingramsceleste@gmail.com" target="_blank">ingramsceleste@gmail.com</Link>
+            <Link className="underline decoration-1 hover:text-blue-300" href="mailto:ingramsceleste@gmail.com" target="_blank">ingramsceleste@gmail.com</Link>
           </div>
         </div>
       </div>

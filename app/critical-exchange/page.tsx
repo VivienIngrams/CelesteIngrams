@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const CriticalExchange = () => {
   return (
-    <main id="critical-exchange" className="w-full p-4 md:p-8 xl:p-20 h-screen">
+    <main id="critical-exchange" className="w-full p-4 md:p-8 lg:pt-20 xl:pt-20 xl:px-20 h-[96vh]">
       <div className="w-full flex justify-center">
         <h1 className="text-3xl lg:text-4xl p-2 md:p-6 font-light">
           Critical Exchange
@@ -27,7 +27,7 @@ const CriticalExchange = () => {
             work and community relationships through critical dialogue. We work
             with artists to share their work and facilitate group conversation
             giving feedback to support the artworks’ development. Find out more
-            about <Link className="underline hover:text-blue-300" href="https://www.criticalexchange.org" target="_blank">Critical Exchange here.</Link>
+            about <Link className="underline decoration-1 hover:text-blue-300" href="https://www.criticalexchange.org" target="_blank">Critical Exchange here.</Link>
           </p>
         </div>
       </div>

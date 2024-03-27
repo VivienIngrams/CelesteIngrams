@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <main id="About" className="w-full p-4 md:p-8 xl:p-20 h-screen lg:grid lg:grid-cols-2">
+    <main id="About" className="w-full p-4 md:p-8 lg:pt-20 xl:pt-20 xl:px-20 h-screen lg:grid lg:grid-cols-2">
       <div className="h-full  flex flex-col justify-center items-center">
         <Image src="/images/Celeste-facilitating.png" alt="Celeste Ingrams" width={500} height={500} />
       </div>
