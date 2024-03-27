@@ -6,12 +6,13 @@ import nodemailer from "nodemailer";
 export async function POST(request) {
   const user = process.env.NODEMAILER_USER;
   const pass = process.env.NODEMAILER_PASS;
+  console.log(user, pass);
 
   try {
     const formData = await request.formData();
     const name = formData.get("name");
     const email = formData.get("email");
-    console.log(name, email,);
+
 
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
@@ -19,8 +20,8 @@ export async function POST(request) {
       secure: true,
       tls: { rejectUnauthorized: false },
       auth: {
-        user: "ingramsceleste@gmail.com",
-        pass: "pbtkhddkhyozhdzu",
+        user: user,
+        pass: pass,
       },
     });
 
