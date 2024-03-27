@@ -7,11 +7,11 @@ type PracticeDataType = {
   
   export const practiceData: PracticeDataType[] = [
     {
-        title: "Workshops",
-        id: "workshops",
-        url: "/workshops",
+        title: "Projects",
+        id: "Projects",
+        url: "/projects",
         image: {
-            url: "/images/Workshops.png",
+            url: "/images/Projects.png",
             position: "center",
             size: "400px",
         },
@@ -19,7 +19,7 @@ type PracticeDataType = {
         {
         title: "Practice",
         id: "practice",
-        url: "/practice",
+        url: "/practice/practice",
         image: {
             url: "/images/Practice.png",
             position: "center",
