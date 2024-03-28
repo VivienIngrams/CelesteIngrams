@@ -1,12 +1,50 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import Image from "next/image";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import {photos} from "./data";
+
+interface Photo {
+  id: number;
+  src: string;
+  alt: string;
+}  
+
+const Home: React.FC = () => {
+
+
+  const [emblaRef, embla] = useEmblaCarousel(
+    {
+      loop: true,
+    },
+    [Autoplay()]
+  );
+
   return (
-      <main id="Home" className="w-full p-4 md:p-12 lg:pt-20 xl:p-20 h-screen flex justify-center items-center">
-        <div className="relative lg:my-4 h-[200px] w-[300px] xs:h-[300px] xs:w-[400px] sm:w-[500px] sm:h-[400px] md:w-[680px] md:h-[450px] 2xl:[w-900px] 2xl:h-[600px] ">
-          <Image src="/images/Home-page-gallery/Constellations.png" alt="Gallery" fill sizes="600px" />
+    <div className="w-full p-4 md:p-8 lg:pt-20 xl:pt-20 xl:px-20 h-[95vh]">
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex">
+          {photos.map((image: Photo) => (
+            <div
+              className="relative flex justify-center items-center flex-none flex-wrap lg:flex-nowrap w-full m-5"
+              key={image.id}
+            >
+              <div className="overflow-hidden flex justify-center items-center h-3/4 w-3/4">
+                <Image
+                  src={image.src}
+                  height={700}
+                  width={900}
+                  className=""
+                  alt={image.alt}
+                />
+              </div>
+            </div>
+          ))}
         </div>
-       
-      </main>
-    );
-  };
+      </div>
+    </div>
+  );
+};
+
+export default Home;

@@ -28,7 +28,7 @@ const Practice = () => {
                 />
                 <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
                   <div>
-                    <p className="py-3 text-white text-2xl font-italiana uppercase cursor-pointer text-center">
+                    <p className="py-3 text-white text-2xl font-italiana uppercase cursor-pointer text-center hover:text-blue-300 ">
                       {title}
                     </p>
                   </div>
