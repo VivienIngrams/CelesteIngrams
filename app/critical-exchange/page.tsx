@@ -15,8 +15,8 @@ const CriticalExchange = () => {
           <Image
             src="/images/Critical-exchange.jpg"
             alt="Critical Exchange meeting"
-            width={700}
-            height={500}
+            width={500}
+            height={300}
           />
         </div>
         <div className="lg:h-full text-justify flex flex-col justify-center items-center">

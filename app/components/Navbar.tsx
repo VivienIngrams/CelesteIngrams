@@ -26,27 +26,27 @@ const Navbar: React.FC = () => {
           <div>
             <ul className="hidden lg:flex">
               <Link href="/about">
-                <li className=" ml-10 hover:border-b hover:text-blue-300" >
+                <li className=" ml-5 hover:border-b hover:text-blue-300" >
                   About
                 </li>
               </Link>
               <Link href="/practice">
-                <li className=" ml-10 hover:border-b hover:text-blue-300" >
+                <li className=" ml-5 hover:border-b hover:text-blue-300" >
                   Practice
                 </li>
               </Link>
               <Link href="/critical-exchange">
-                <li className=" ml-10 hover:border-b hover:text-blue-300" >
+                <li className=" ml-5 hover:border-b hover:text-blue-300" >
                   Critical Exchange
                 </li>
               </Link>
               <Link href="/workshops">
-                <li className=" ml-10 hover:border-b hover:text-blue-300" >
+                <li className=" ml-5 hover:border-b hover:text-blue-300" >
                   Workshops
                 </li>
               </Link>
               <Link href="/contact">
-                <li className=" mx-10 hover:border-b hover:text-blue-300" >
+                <li className=" mx-5 hover:border-b hover:text-blue-300" >
                   Contact
                 </li>
               </Link>

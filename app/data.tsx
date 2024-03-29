@@ -5,6 +5,12 @@ type PracticeDataType = {
   image: { url: string; position: string; size: string };
 };
 
+type VideosType = {
+  id: number;
+  title: string;
+  url: string;
+};
+
 type ProjectsType = {
   id: number;
   title: string;
@@ -14,6 +20,49 @@ type ProjectsType = {
 };
 
 type PhotoType = {  id: number; src: string; alt: string };
+
+export const videosData: VideosType[] = [
+{
+  id: 1,
+  title: "Place Matters: drawing in the journey , drawing out the past",
+  url: "https://www.youtube.com/embed/TpwJ7esYsAQ",
+},
+{
+  id: 2,
+  title: "Place Matters: drawing in the journey , drawing out the past",
+  url: "https://www.youtube.com/embed/yvN2WMzMrbY",
+},
+{
+  id: 3,
+  title: "Place Matters: drawing in the journey , drawing out the past",
+  url: "https://www.youtube.com/embed/5cHSnCvUo6I",
+},
+{
+  id: 4,
+  title: "Place Matters: drawing in the journey , drawing out the past",
+  url: "https://www.youtube.com/embed/iWRAztrhRvE",
+},
+{
+  id: 5,
+  title: "Place Matters: drawing in the journey , drawing out the past",
+  url: "https://www.youtube.com/embed/AzNmBNzPu-0",
+},
+{
+  id: 6,
+  title: "Place Matters: drawing in the journey , drawing out the past",
+  url: "https://www.youtube.com/embed/eebht9Z0qvQ",
+},
+{
+  id: 7,
+  title: "Place Matters: drawing in the journey , drawing out the past",
+  url: "https://www.youtube.com/embed/4yOVDfuxrBg",
+},
+{
+  id: 8,
+  title: "Place Matters: drawing in the journey , drawing out the past",
+  url: "https://www.youtube.com/embed/lJKvXvNQriQ",
+}
+];
 
 export const practiceData: PracticeDataType[] = [
   {
