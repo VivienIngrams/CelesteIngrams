@@ -12,56 +12,57 @@ type VideosType = {
 };
 
 type ProjectsType = {
-  id: number;
+  id: string;
   title: string;
   text: string;
   images: string[];
   url: string;
+  collaboration: boolean;
 };
 
-type PhotoType = {  id: number; src: string; alt: string };
+type PhotoType = { id: number; src: string; alt: string };
 
 export const videosData: VideosType[] = [
-{
-  id: 1,
-  title: "Place Matters: drawing in the journey , drawing out the past",
-  url: "https://www.youtube.com/embed/TpwJ7esYsAQ",
-},
-{
-  id: 2,
-  title: "Place Matters: drawing in the journey , drawing out the past",//change titles!!
-  url: "https://www.youtube.com/embed/yvN2WMzMrbY",
-},
-{
-  id: 3,
-  title: "Place Matters: drawing in the journey , drawing out the past",
-  url: "https://www.youtube.com/embed/5cHSnCvUo6I",
-},
-{
-  id: 4,
-  title: "Place Matters: drawing in the journey , drawing out the past",
-  url: "https://www.youtube.com/embed/iWRAztrhRvE",
-},
-{
-  id: 5,
-  title: "Place Matters: drawing in the journey , drawing out the past",
-  url: "https://www.youtube.com/embed/AzNmBNzPu-0",
-},
-{
-  id: 6,
-  title: "Place Matters: drawing in the journey , drawing out the past",
-  url: "https://www.youtube.com/embed/eebht9Z0qvQ",
-},
-{
-  id: 7,
-  title: "Place Matters: drawing in the journey , drawing out the past",
-  url: "https://www.youtube.com/embed/4yOVDfuxrBg",
-},
-{
-  id: 8,
-  title: "Place Matters: drawing in the journey , drawing out the past",
-  url: "https://www.youtube.com/embed/lJKvXvNQriQ",
-}
+  {
+    id: 1,
+    title: "Place Matters: drawing in the journey , drawing out the past",
+    url: "https://www.youtube.com/embed/TpwJ7esYsAQ",
+  },
+  {
+    id: 2,
+    title: "Place Matters: drawing in the journey , drawing out the past", //change titles!!
+    url: "https://www.youtube.com/embed/yvN2WMzMrbY",
+  },
+  {
+    id: 3,
+    title: "Place Matters: drawing in the journey , drawing out the past",
+    url: "https://www.youtube.com/embed/5cHSnCvUo6I",
+  },
+  {
+    id: 4,
+    title: "Place Matters: drawing in the journey , drawing out the past",
+    url: "https://www.youtube.com/embed/iWRAztrhRvE",
+  },
+  {
+    id: 5,
+    title: "Place Matters: drawing in the journey , drawing out the past",
+    url: "https://www.youtube.com/embed/AzNmBNzPu-0",
+  },
+  {
+    id: 6,
+    title: "Place Matters: drawing in the journey , drawing out the past",
+    url: "https://www.youtube.com/embed/eebht9Z0qvQ",
+  },
+  {
+    id: 7,
+    title: "Place Matters: drawing in the journey , drawing out the past",
+    url: "https://www.youtube.com/embed/4yOVDfuxrBg",
+  },
+  {
+    id: 8,
+    title: "Place Matters: drawing in the journey , drawing out the past",
+    url: "https://www.youtube.com/embed/lJKvXvNQriQ",
+  },
 ];
 
 export const practiceData: PracticeDataType[] = [
@@ -107,138 +108,198 @@ export const practiceData: PracticeDataType[] = [
   },
 ];
 
-const database: ProjectsType[] = [
+export const projects: ProjectsType[] = [
   {
-    id: 1,
+    id: "place",
     title: "Place Matters: drawing in the journey , drawing out the past",
     text: "",
-    images: [],
-    url: ""
+    images: [
+      "/images/Place-matters.png",
+    ],
+    url: "/projects/place",
+    collaboration: false,
   },
   {
-    id: 2,
+    id: "maps",
     title: "Home-hold/bed-compass maps",
     text: "",
-    images: [],
-    url: ""
+    images: [
+      "/images/Projects/Maps/maps (1).jpg",
+      "/images/Projects/Maps/maps (4).jpg",
+      "/images/Projects/Maps/maps (5).jpg",
+      "/images/Projects/Maps/maps (6).jpg",
+    ],
+    url: "/projects/maps",
+    collaboration: false,
   },
   {
-    id: 3,
+    id: "walking",
     title: "Walking grids around grandma",
     text: "",
-    images: [],
-    url: ""
+    images: [
+      "/images/Projects/Walking/walking (1).jpg"
+    ],
+    url: "/projects/walking",
+    collaboration: false,
   },
   {
-    id: 4,
+    id: "natural",
     title: "Natural dye garden/curtain",
     text: "",
-    images: [],
-    url: ""
+    images: [
+      "/images/Projects/Natural/natural (1).jpg"
+    ],
+    url: "/projects/natural",
+    collaboration: true,
   },
   {
-    id: 5,
+    id: "fashion",
     title: "Fashion Show Stories",
     text: "",
-    images: [],
-    url: ""
+    images: [
+      "/images/Projects/Fashion/fashion (1).jpg"
+    ],
+    url: "/projects/fashion",
+    collaboration: false,
   },
   {
-    id: 6,
+    id: "tanda",
     title: "Tanda",
     text: "",
-    images: [],
-    url: ""
+    images: [
+      "/images/Projects/Tanda/Tanda.jpg"
+    ],
+    url: "/projects/tanda",
+    collaboration: true,
   },
   {
-    id: 7,
+    id: "loss",
     title: "Loss Group Projects",
     text: "",
-    images: [],
-    url: ""
+    images: [
+      "/images/Projects/Loss/loss (1).jpg"
+    ],
+    url: "/projects/loss",
+    collaboration: true,
   },
   {
-    id: 8,
+    id: "webs",
     title: "Webs",
     text: "",
-    images: [],
-    url: ""
+    images: [
+      "/images/Projects/Webs/webs (1).jpg"
+    ],
+    url: "/projects/webs",
+    collaboration: false,
   },
   {
-    id: 9,
-    title: "ght – a reincarnation",
+    id: "ght",
+    title: "ght : a reincarnation",
     text: "",
-    images: [],
-    url: ""
+    images: [
+      "/images/Projects/Ght/ght (1).jpg"
+    ],
+    url: "/projects/ght",
+    collaboration: true,
   },
   {
-    id: 10,
-    title: "Trolly Performances",
+    id: "trolley",
+    title: "Trolley Performances",
     text: "",
-    images: [],
-    url: ""
+    images: [
+      "/images/Projects/Trolley/trolley (1).jpg",
+      "/images/Projects/Trolley/trolley (2).jpg",
+      "/images/Projects/Trolley/trolley (3).jpg",
+      "/images/Projects/Trolley/trolley (4).jpg",
+      "/images/Projects/Trolley/trolley (5).jpg",
+      "/images/Projects/Trolley/trolley (6).jpg",
+      "/images/Projects/Trolley/trolley (7).jpg",
+    ],
+    url: "/projects/trolley",
+    collaboration: false,
   },
   {
-    id: 11,
+    id: "conversations",
     title: "Drawing converstaions/ reflections",
     text: "",
-    images: [],
-    url: ""
+    images: [
+      "/images/Projects/Conversations/conversations (1).jpg"
+    ],
+    url: "/projects/conversations",
+    collaboration: false,
   },
   {
-    id: 12,
+    id: "paper",
     title: "Paper-making",
     text: "",
-    images: [],
-    url: ""
+    images: [
+      "/images/Projects/Paper/paper.jpg",
+      "/images/Projects/Paper/paper (2).jpg"
+    ],
+    url: "/projects/paper",
+    collaboration: false,
   },
   {
-    id: 13,
+    id: "LHF",
     title: "Lower Hewood Farm",
     text: "",
-    images: [],
-    url: ""
+    images: [
+      "/images/Projects/Lhf/lhf (1).jpg"
+    ],
+    url: "/projects/lhf",
+    collaboration: true,
   },
   {
-    id: 14,
+    id: "support",
     title: "Support",
     text: "",
-    images: [],
-    url: ""
+    images: [
+      "/images/Projects/Support/support (1).jpg"
+    ],
+    url: "/projects/support",
+    collaboration: true,
   },
   {
-    id: 15,
+    id: "women",
     title: "Women Scream",
     text: "",
-    images: [],
-    url: ""
+    images: [
+      "/images/Projects/Women/women (1).jpg"
+    ],
+    url: "/projects/women",
+    collaboration: true,
   },
   {
-    id: 16,
+    id: "unit11",
     title: "unit11studios",
     text: "",
-    images: [],
-    url: ""
+    images: [
+      "/images/Projects/Unit11/unit11 (1).jpg"
+    ],
+    url: "/projects/unit11",
+    collaboration: true,
   },
   {
-    id: 17,
+    id: "passing",
     title: "Conversations with passing friends",
     text: "",
-    images: [],
-    url: ""
+    images: [
+      "/images/Works/works (2).jpg"
+    ],
+    url: "/projects/passing",
+    collaboration: false,
   },
   {
-    id: 18,
+    id: "youngminds",
     title: "YoungMinds",
     text: "",
-    images: [],
-    url: ""
-  }
+    images: [
+      "/images/Projects/YoungMinds/youngminds (1).jpg"
+    ],
+    url: "/projects/youngminds",
+    collaboration: true,
+  },
 ];
-
-export default database;
-
-
 
 
 export const photos: PhotoType[] = [
@@ -279,7 +340,7 @@ export const drawings: PhotoType[] = [
     src: "/images/Works/works (1).jpg",
     alt: "Drawing",
   },
-  
+
   {
     id: 25,
     src: "/images/Works/works (13).jpg",
@@ -321,7 +382,7 @@ export const drawings: PhotoType[] = [
     src: "/images/Works/works (5)-2.jpg",
     alt: "Drawing",
   },
-   {
+  {
     id: 13,
     src: "/images/Works/works (7).jpg",
     alt: "Drawing",
@@ -372,7 +433,4 @@ export const drawings: PhotoType[] = [
     src: "/images/Works/works (12).jpg",
     alt: "Drawing",
   },
-
 ];
-
-
