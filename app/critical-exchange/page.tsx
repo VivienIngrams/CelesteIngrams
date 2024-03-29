@@ -11,7 +11,7 @@ const CriticalExchange = () => {
         </h1>
       </div>
       <div className="w-full h-full md:h-[75vh] flex flex-col items-center justify-center lg:grid lg:grid-cols-2">
-        <div className="pt-6 p-4 h-full  flex flex-col justify-center items-center">
+        <div className="pt-6 h-full  flex flex-col justify-center items-center">
           <Image
             src="/images/Critical-exchange.jpg"
             alt="Critical Exchange meeting"
@@ -20,7 +20,7 @@ const CriticalExchange = () => {
           />
         </div>
         <div className="lg:h-full text-justify flex flex-col justify-center items-center">
-          <p className="m-4">
+          <p className="my-4">
             Critical Exchange is a project initiated in 2019, co-facilitated
             with artist, Jilly Evans. Supported by ‘a space’ arts, it is an
             artist-led network in Southampton focused on developing creative

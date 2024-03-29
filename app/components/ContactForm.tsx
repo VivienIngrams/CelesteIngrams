@@ -24,7 +24,7 @@ const ContactForm: React.FC = () => {
     }
   }
   return (
-    <form onSubmit={handleSubmit} className="w-full p-4">
+    <form onSubmit={handleSubmit} className="w-full py-4">
         <div className="flex flex-col">
           <label htmlFor="name" className=" text-lg py-2">
             Nome
