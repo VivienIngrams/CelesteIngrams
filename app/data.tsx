@@ -111,7 +111,7 @@ export const practiceData: PracticeDataType[] = [
 export const projects: ProjectsType[] = [
   {
     id: "place",
-    title: "Place Matters: drawing in the journey , drawing out the past",
+    title: "Place Matters: drawing in the journey, drawing out the past",
     text: "",
     images: [
       "/images/Place-matters.png",
