@@ -29,7 +29,7 @@ export const videosData: VideosType[] = [
 },
 {
   id: 2,
-  title: "Place Matters: drawing in the journey , drawing out the past",
+  title: "Place Matters: drawing in the journey , drawing out the past",//change titles!!
   url: "https://www.youtube.com/embed/yvN2WMzMrbY",
 },
 {
@@ -267,6 +267,112 @@ export const photos: PhotoType[] = [
     src: "/images/Home-page-gallery/Meeting.jpg",
     alt: "Critical Exchange Meeting",
   },
+];
+export const drawings: PhotoType[] = [
+  {
+    id: 5,
+    src: "/images/Works/works (3).jpg",
+    alt: "Drawing",
+  },
+  {
+    id: 1,
+    src: "/images/Works/works (1).jpg",
+    alt: "Drawing",
+  },
+  
+  {
+    id: 25,
+    src: "/images/Works/works (13).jpg",
+    alt: "Drawing",
+  },
+  {
+    id: 2,
+    src: "/images/Works/works (1)-2.jpg",
+    alt: "Drawing",
+  },
+  {
+    id: 4,
+    src: "/images/Works/works (2)-2.jpg",
+    alt: "Drawing",
+  },
+
+  {
+    id: 7,
+    src: "/images/Works/works (4).jpg",
+    alt: "Drawing",
+  },
+  {
+    id: 6,
+    src: "/images/Works/works (3)-2.jpg",
+    alt: "Drawing",
+  },
+  {
+    id: 8,
+    src: "/images/Works/works (4)-2.jpg",
+    alt: "Drawing",
+  },
+  {
+    id: 9,
+    src: "/images/Works/works (5).jpg",
+    alt: "Drawing",
+  },
+  {
+    id: 10,
+    src: "/images/Works/works (5)-2.jpg",
+    alt: "Drawing",
+  },
+   {
+    id: 13,
+    src: "/images/Works/works (7).jpg",
+    alt: "Drawing",
+  },
+  {
+    id: 14,
+    src: "/images/Works/works (7)-2.jpg",
+    alt: "Drawing",
+  },
+  {
+    id: 15,
+    src: "/images/Works/works (8).jpg",
+    alt: "Drawing",
+  },
+  {
+    id: 16,
+    src: "/images/Works/works (8)-2.jpg",
+    alt: "Drawing",
+  },
+  {
+    id: 17,
+    src: "/images/Works/works (9).jpg",
+    alt: "Drawing",
+  },
+  {
+    id: 18,
+    src: "/images/Works/works (9)-2.jpg",
+    alt: "Drawing",
+  },
+  {
+    id: 19,
+    src: "/images/Works/works (10).jpg",
+    alt: "Drawing",
+  },
+  {
+    id: 20,
+    src: "/images/Works/works (10)-2.jpg",
+    alt: "Drawing",
+  },
+  {
+    id: 21,
+    src: "/images/Works/works (11).jpg",
+    alt: "Drawing",
+  },
+
+  {
+    id: 23,
+    src: "/images/Works/works (12).jpg",
+    alt: "Drawing",
+  },
+
 ];
 
 

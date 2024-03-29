@@ -8,19 +8,19 @@ const Practice = () => {
   return (
     <main id="Practice" className="w-full p-4 md:p-8 xl:p-20 min-h-screen">
       <div className="w-full flex justify-center">
-        <h1 className="pt-24 md:pt:40 lg:pt-12 text-3xl lg:text-4xl p-2 md:p-6 font-light">Practice</h1>
+        <h1 className="pt-24 md:pt-40 lg:pt-16 text-3xl lg:text-4xl p-2 md:p-6 font-light">Practice</h1>
       </div>
       <div className="w-full flex flex-col items-center justify-center">
         {practiceData.map(({ image, title, id, url }) => (
           <div
             key={id}
-            className=" select-none w-full h-[60%] flex flex-col items-center mx-8"
+            className=" select-none w-full h-[60%] flex flex-col items-center "
             tabIndex={0}
           >
             <Link href={url}>
-              <div className="relative m-4 shadow-md group w-[300px] h-[400px] md:w-[70vw] md:h-[45vh] max-w-[50vw] max-h-[60vh] bg-black">
+              <div className="relative m-4 shadow-md group w-[250px] h-[200px] xs:w-[330px] md:w-[650px] md:h-[350px]  lg:w-[800px] lg:h-[400px] bg-black">
                 <Image
-                  className=" object-cover opacity-60 group-hover:opacity-50  border-[1px] border-black"
+                  className=" object-cover opacity-60 group-hover:opacity-50 "
                   src={image.url}
                   alt={title}
                   fill

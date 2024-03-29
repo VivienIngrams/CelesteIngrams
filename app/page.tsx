@@ -22,7 +22,7 @@ const Home: React.FC = () => {
   );
 
   return (
-    <div className="w-full p-4 md:p-8 lg:pt-20 xl:pt-20 xl:px-20 h-[90vh]">
+    <div className="w-full p-4 md:p-8 lg:pt-20 xl:pt-20 xl:px-20 h-[82vh]">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {photos.map((image: Photo) => (
