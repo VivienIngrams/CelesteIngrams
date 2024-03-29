@@ -15,11 +15,11 @@ const Projects = () => {
           Projects
         </h1>
       </div>
-      <div className="w-full mx-auto flex flex-col justify-center items-center xs:w-[90vw] md:p-8 lg:pt-20 xl:pt-20 xl:px-20 md:grid md:grid-cols-2 lg:grid-cols-3 ">
+      <div className="w-full pt-8 mx-auto flex flex-col justify-center items-start xs:w-[90vw] md:p-8 lg:pt-20 xl:pt-20 xl:px-20 md:grid md:grid-cols-2 xl:grid-cols-3 gap-8">
         {projects.map((project) => (
-          <Link href={project.url} key={project.id}>
-            <div className="flex flex-col my-4 "></div>
-            <div className="relative h-[200px] w-[200px] xs:w-[300px] xs:h-[300px] 2xl:w-[350px] 2xl:h-[650px] ">
+          <Link href={project.url} key={project.id} className="mx-auto ">
+           
+            <div className="relative h-[200px] w-[200px] xs:w-[300px] xs:h-[300px] 2xl:w-[350px] 2xl:h-[350px] ">
               <Image
                 src={project.images[0]}
                 alt={project.title}
@@ -29,7 +29,7 @@ const Projects = () => {
               />
             </div>
               <div className="mt-1 w-[200px] xs:w-[300px] 2xl:w-[350px]">
-                <h2 className=" text-xs font-light">
+                <h2 className=" text-xs xs:text-sm md:text-lg font-light">
                   {project.title}
                 </h2>
               </div>
