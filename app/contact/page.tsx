@@ -11,9 +11,9 @@ const Contact = () => {
     >
       <div className="h-full  flex flex-col justify-center items-center">
         <Image
-          src="/images/Profile.png"
+          src="/images/Profile.jpg"
           alt="Celeste Ingrams"
-          width={500}
+          width={300}
           height={500}
         />
       </div>
@@ -22,7 +22,7 @@ const Contact = () => {
           ingramsceleste@gmail.com
         </Link>
         <p className="m-4">+44 7824805518</p>
-        <p className="m-4">
+        <p className="m-4 text-justify">
           If you would be interested in receiving more information from time to
           time please feel free to subscribe to my contacts list.
         </p>

@@ -6,20 +6,20 @@ const CriticalExchange = () => {
   return (
     <main id="critical-exchange" className="w-full p-4 md:p-8 lg:pt-20 xl:pt-20 xl:px-20 h-[96vh]">
       <div className="w-full flex justify-center">
-        <h1 className="text-3xl lg:text-4xl p-2 md:p-6 font-light">
+        <h1 className="pt-24 md:pt:40 lg:pt-12 text-3xl lg:text-4xl font-light">
           Critical Exchange
         </h1>
       </div>
-      <div className="w-full h-full lg:grid lg:grid-cols-2">
-        <div className="h-full  flex flex-col justify-center items-center">
+      <div className="w-full h-full md:h-[75vh] flex flex-col items-center justify-center lg:grid lg:grid-cols-2">
+        <div className="pt-6 p-4 h-full  flex flex-col justify-center items-center">
           <Image
-            src="/images/Critical-exchange.png"
+            src="/images/Critical-exchange.jpg"
             alt="Critical Exchange meeting"
-            width={500}
+            width={700}
             height={500}
           />
         </div>
-        <div className="h-full text-justify flex flex-col justify-center items-center">
+        <div className="lg:h-full text-justify flex flex-col justify-center items-center">
           <p className="m-4">
             Critical Exchange is a project initiated in 2019, co-facilitated
             with artist, Jilly Evans. Supported by ‘a space’ arts, it is an
