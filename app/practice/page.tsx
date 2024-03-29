@@ -18,9 +18,9 @@ const Practice = () => {
             tabIndex={0}
           >
             <Link href={url}>
-              <div className="relative m-4 shadow-md group w-[300px] h-[400px] md:w-[70vw] md:h-[45vh] max-w-[75vw] max-h-[50vh]  bg-gradient-to-r from-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0.2)]">
+              <div className="relative m-4 shadow-md group w-[300px] h-[400px] md:w-[70vw] md:h-[45vh] max-w-[50vw] max-h-[60vh] bg-black">
                 <Image
-                  className=" object-fill opacity-20 group-hover:opacity-60 border-[1px] border-black"
+                  className=" object-cover opacity-60 group-hover:opacity-50  border-[1px] border-black"
                   src={image.url}
                   alt={title}
                   fill
