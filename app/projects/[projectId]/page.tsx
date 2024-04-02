@@ -83,7 +83,7 @@ const Project = ({ params }: { params: { projectId: string } }) => {
           </div>
         </div>
         <div className="w-full flex justify-center underline decoration-1 cursor-pointer">
-          <Link className="text-center m-2" href="/">
+          <Link className="text-center m-2" href="/projects">
             Back to Projects
           </Link>
         </div>

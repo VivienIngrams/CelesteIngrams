@@ -45,7 +45,7 @@ const Workshops = () => {
             can also design a proposal based on individual consultation.
           </p>
           <p className="my-4 text-left font-bold">Some examples of the activities I deliver are:</p>
-          <ul className="text-xs md:text-md my-4 text-left">
+          <ul className="text-xs md:text-base my-4 text-left">
             <li>Experimental drawing techniques</li>
             <li>Mindfulness drawing</li>
             <li>Body-focused drawing and movement exercises </li>
