@@ -27,6 +27,7 @@ const Projects = () => {
                 sizes="40vw"
                 className="object-cover"
               />
+              
             </div>
               <div className="mt-1 w-[200px] xs:w-[300px] 2xl:w-[350px]">
                 <h2 className=" text-xs xs:text-sm md:text-lg font-light">

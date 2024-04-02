@@ -6,7 +6,7 @@ const CriticalExchange = () => {
   return (
     <main id="critical-exchange" className="w-full p-4 md:p-8 lg:pt-20 xl:pt-20 xl:px-20 h-[96vh]">
       <div className="w-full flex justify-center">
-        <h1 className="pt-24 md:pt:40 lg:pt-12 text-3xl lg:text-4xl font-light">
+        <h1 className="pt-24 md:pt-40 lg:pt-12 text-3xl lg:text-4xl p-2 md:p-6 font-light text-center tracking-tighter">
           Critical Exchange
         </h1>
       </div>

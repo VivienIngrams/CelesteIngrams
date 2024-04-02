@@ -19,7 +19,7 @@ type ProjectsType = {
   text2?: string;
   link?: { url: string; text: string };
   videos?: { url: string; alt: string }[];
-  images?: string[];
+  images: string[];
   url: string;
   collaboration: boolean;
 };
@@ -29,42 +29,42 @@ type PhotoType = { id: number; src: string; alt: string };
 export const videosData: VideosType[] = [
   {
     id: 1,
-    title: "Place Matters: drawing in the journey , drawing out the past",
+    title: "Home comforts – (neither) here and/or there",
     url: "https://www.youtube.com/embed/TpwJ7esYsAQ",
   },
   {
     id: 2,
-    title: "Place Matters: drawing in the journey , drawing out the past", //change titles!!
+    title: "Doorway Remains - I never left - through the door",
     url: "https://www.youtube.com/embed/yvN2WMzMrbY",
   },
   {
     id: 3,
-    title: "Place Matters: drawing in the journey , drawing out the past",
+    title: "Spitting Teeth Back into Place ",
     url: "https://www.youtube.com/embed/5cHSnCvUo6I",
   },
   {
     id: 4,
-    title: "Place Matters: drawing in the journey , drawing out the past",
+    title: "Spitting Teeth Back into Place - again",
     url: "https://www.youtube.com/embed/iWRAztrhRvE",
   },
   {
     id: 5,
-    title: "Place Matters: drawing in the journey , drawing out the past",
+    title: "Drawing in the journey , drawing out the past",
     url: "https://www.youtube.com/embed/AzNmBNzPu-0",
   },
   {
     id: 6,
-    title: "Place Matters: drawing in the journey , drawing out the past",
+    title: "Drawing in the journey , drawing out the past - again",
     url: "https://www.youtube.com/embed/eebht9Z0qvQ",
   },
   {
     id: 7,
-    title: "Place Matters: drawing in the journey , drawing out the past",
+    title: "Arches entrace web - the making",
     url: "https://www.youtube.com/embed/4yOVDfuxrBg",
   },
   {
     id: 8,
-    title: "Place Matters: drawing in the journey , drawing out the past",
+    title: "Arches entrace web - the unmaking",
     url: "https://www.youtube.com/embed/lJKvXvNQriQ",
   },
 ];
@@ -115,16 +115,28 @@ export const practiceData: PracticeDataType[] = [
 export const projects: ProjectsType[] = [
   {
     id: "place",
-    title: "Place Matters: drawing in the journey, drawing out the past",
+    title: "Place Matters",
     subtitle: "2022 - ongoing",
     text: "This place-based research project generated a body of work responding to a significant place from my history which represented a turning point in my life. Revisiting through embodied practices of drawing, movement, writing, audio, photography and video generated an exploration of fragments of narrative and re-storying of somatic memory. Themes of transformation, transition, trauma and place attachment wove throughout the research generating dialogue and positing questions about care and community.",
-    
-    videos: [ 
-      { url: "https://www.youtube.com/embed/yvN2WMzMrbY", alt: "Doorway Remains - I never left - through the door" },
-      { url: "https://www.youtube.com/embed/TpwJ7esYsAQ", alt: "Home comforts – (neither) here and/or there" },
-      { url: "https://www.youtube.com/embed/iWRAztrhRvE", alt: "Spitting Teeth Back into Place - again      " },
-      { url: "https://www.youtube.com/embed/5cHSnCvUo6I", alt: "Spitting Teeth Back into Place - again"}
-        ],    
+    images: ["/images/Place-matters.png"],
+    videos: [
+      {
+        url: "https://www.youtube.com/embed/yvN2WMzMrbY",
+        alt: "Doorway Remains - I never left - through the door",
+      },
+      {
+        url: "https://www.youtube.com/embed/TpwJ7esYsAQ",
+        alt: "Home comforts – (neither) here and/or there",
+      },
+      {
+        url: "https://www.youtube.com/embed/iWRAztrhRvE",
+        alt: "Spitting Teeth Back into Place - again      ",
+      },
+      {
+        url: "https://www.youtube.com/embed/5cHSnCvUo6I",
+        alt: "Spitting Teeth Back into Place - again",
+      },
+    ],
     url: "/projects/place",
     collaboration: false,
   },
@@ -132,12 +144,13 @@ export const projects: ProjectsType[] = [
     id: "drawing",
     title: "Drawing in the journey, drawing out the past",
     subtitle: "2020 - 2022",
-    text: "This body of work developed from exploration of narrating and witnessing journeys – layering this process through film, audio, performance and drawing facilitated multiple perspectives on time, mobility, reconnecting points of place, psychogeography and memory study.",     images: [
-      "/images/Projects/Drawing/drawing (1).png",
-      "/images/Projects/Drawing/drawing (1)-2.png",
-      "/images/Projects/Drawing/drawing (2).png",
-      "/images/Projects/Drawing/drawing (3).png",
-      "/images/Projects/Drawing/drawing (4).png",
+    text: "This body of work developed from exploration of narrating and witnessing journeys – layering this process through film, audio, performance and drawing facilitated multiple perspectives on time, mobility, reconnecting points of place, psychogeography and memory study.",
+    images: [
+      "/images/Projects/Drawing/drawing (1).jpg",
+      "/images/Projects/Drawing/drawing (1)-2.jpg",
+      "/images/Projects/Drawing/drawing (2).jpg",
+      "/images/Projects/Drawing/drawing (3).jpg",
+      "/images/Projects/Drawing/drawing (4).jpg",
     ],
     url: "/projects/drawing",
     collaboration: false,
@@ -147,7 +160,8 @@ export const projects: ProjectsType[] = [
     title: "Home-hold/bed-compass maps",
     subtitle: "2020",
     text: "Home-hold/bed-compass maps was a series of works made throughout lockdowns in 2020. Revisiting past layers of bedroom spaces and attempts at anchoring sense of orientation in relation to external geography and internal dislocation. The project was both assembling and peeling away layers from the internal dial of bed in this autobiographical exploration. ",
-    text2: "The work took on a performative dimension through a series of live video conversations drawing the layers of drawing performance, drawing performance, performed within an online forum.",
+    text2:
+      "The work took on a performative dimension through a series of live video conversations drawing the layers of drawing performance, drawing performance, performed within an online forum.",
     images: [
       "/images/Projects/Maps/maps (1).jpg",
       "/images/Projects/Maps/maps (4).jpg",
@@ -179,12 +193,12 @@ export const projects: ProjectsType[] = [
     text: "This collaborative project was a commission within the Arches Studios, Southampton. Curated by artist, Gemma Gore and working alongside artist, Lizzie Jones we researched, attended courses and experimented to inform the making of a natural dye garden and curtain to imbed within the studios. We led a series of workshops to share our learning and worked with the studios community to create the curtain and planters.",
     images: [
       "/images/Projects/Natural/natural (1).jpg",
-      "/images/Projects/Natural/natural (1)-2.jpg",
-      "/images/Projects/Natural/natural (2).jpg",
-      "/images/Projects/Natural/natural (2)-2.jpg",
-      "/images/Projects/Natural/natural (3).jpg",
-      "/images/Projects/Natural/natural (4).jpg",
       "/images/Projects/Natural/natural (5).jpg",
+      "/images/Projects/Natural/natural (4).jpg",
+      "/images/Projects/Natural/natural (2)-2.jpg",
+      "/images/Projects/Natural/natural (2).jpg",
+      "/images/Projects/Natural/natural (1)-2.jpg",
+      "/images/Projects/Natural/natural (3).jpg",
     ],
     url: "/projects/natural",
     collaboration: true,
@@ -211,9 +225,7 @@ export const projects: ProjectsType[] = [
     title: "Tanda",
     subtitle: "2018",
     text: "A performance collaboration with dancer Vivien Ingrams and pianist Pierre Dubois. Tanda was part of Ballet de Lorraine, Carte Blanche programme. The piece explored the dynamics in live dance, music and mark-making practice. ",
-    images: [
-      "/images/Projects/Tanda/Tanda.jpg",
-    ],
+    images: ["/images/Projects/Tanda/Tanda.jpg"],
     url: "/projects/tanda",
     collaboration: true,
   },
@@ -235,6 +247,10 @@ export const projects: ProjectsType[] = [
     id: "webs",
     title: "Webs",
     subtitle: "2016 - 2021",
+    link: {
+      text: "Arches entrace web - the making",
+      url: "https://www.youtube.com/embed/4yOVDfuxrBg",
+    },
     text: "This work was a series of installations responding to physical qualities in an environment and the intimate process of creating webs. They  took place at various locations and events as live performances. The work concentrated on the attention to thread tension as drawing – traction – the delicate lines of connection and the points that fall away – break off – and the process of starting over – many many times. The completed webs became both quiet barriers and markers to determine navigation within space – drawing attention to details and provoking qualities of containment and fragility of place.",
     images: [
       "/images/Projects/Webs/webs (1).jpg",
@@ -244,8 +260,7 @@ export const projects: ProjectsType[] = [
       "/images/Projects/Webs/webs (5).jpg",
       "/images/Projects/Webs/webs (6).jpg",
     ],
-    videos: [ { url: "https://www.youtube.com/embed/5cHSnCvUo6I", alt: "Place Matters: drawing in the journey , drawing out the past" },
-    { url: "https://www.youtube.com/embed/5cHSnCvUo6I", alt: "Place Matters: drawing in the journey , drawing out the past" } ],
+    // videos: [{ }, { } ],
     url: "/projects/webs",
     collaboration: false,
   },
@@ -254,10 +269,11 @@ export const projects: ProjectsType[] = [
     title: "ght : a reincarnation",
     subtitle: "2016 - 2018",
     text: "This eighteen  month collaborative  project led by artist sarah filmer ran alongside the development of a new arts and heritage venue in Southampton. Working alongside seven artist I documented the group working process and created work responding to the residency themes as we worked together to animate the building through a rich programme of community events, exhibitions and workshops. I explored through performance, audio, writing and video my relationship with the building and role within the group; looking at dialogue, networks, threads, connections, tensions and slippage points. Find out more about the project here.",
-    link: { url: "https://ght-a-reincarnation.tumblr.com/", text: "ght-a-reincarnation" },
-    images: [
-      "/images/Projects/Ght/ght (1).jpg"
-    ],
+    link: {
+      url: "https://ght-a-reincarnation.tumblr.com/",
+      text: "ght-a-reincarnation",
+    },
+    images: ["/images/Projects/Ght/ght (1).jpg"],
     url: "/projects/ght",
     collaboration: true,
   },
@@ -268,10 +284,10 @@ export const projects: ProjectsType[] = [
     text: " This project spanned a five year period of journeys with a shopping trolly. Starting with a move between studio spaces the performances were narrated documentations of the in-between state of studio contents in this process of transition; reframing these materials and belongings as they moved between one space and another. The project extended to transitions between multiple sites. Routes through the city wove stories of memory, place, social interaction and limitations of the body whilst fore-fronting voice and the power of articulation in the process of drawing.",
     images: [
       "/images/Projects/Trolley/trolley (1).jpg",
-      "/images/Projects/Trolley/trolley (2).jpg",
       "/images/Projects/Trolley/trolley (3).jpg",
-      "/images/Projects/Trolley/trolley (4).jpg",
+      "/images/Projects/Trolley/trolley (2).jpg",
       "/images/Projects/Trolley/trolley (5).jpg",
+      "/images/Projects/Trolley/trolley (4).jpg",
       "/images/Projects/Trolley/trolley (6).jpg",
       "/images/Projects/Trolley/trolley (7).jpg",
     ],
@@ -301,7 +317,7 @@ export const projects: ProjectsType[] = [
     text: "The process of tearing, shredding, destroying, then mulching down and decomposing into a digested form to be reconstituted into new. Letting go of old skins to generate new skins; a surface of what has past reconstituted. ",
     images: [
       "/images/Projects/Paper/paper.jpg",
-      "/images/Projects/Paper/paper (2).jpg"
+      "/images/Projects/Paper/paper (2).jpg",
     ],
     url: "/projects/paper",
     collaboration: false,
@@ -312,11 +328,11 @@ export const projects: ProjectsType[] = [
     subtitle: "2013 - 2016",
     text: "Working with Lower Hewood Farm generated a number of group working residency visits exploring the farm as place for expanded conversation into dialogue between practices, group-working methodologies, and experiments of interventions and performance inspired by the environment.  Individual residency visits concentrated on the library archive – the transition between a place of storage to a cataloguing of materials, books and objects feeding into a new iteration as a dynamic space for expanding place and learning.",
     images: [
-      "/images/Projects/LHF/LHF (1).jpg",
+      "/images/Projects/LHF/LHF (5).jpg",
       "/images/Projects/LHF/LHF (2).jpg",
       "/images/Projects/LHF/LHF (3).jpg",
       "/images/Projects/LHF/LHF (4).jpg",
-      "/images/Projects/LHF/LHF (5).jpg",
+      "/images/Projects/LHF/LHF (1).jpg",
     ],
     url: "/projects/lhf",
     collaboration: true,
@@ -327,10 +343,9 @@ export const projects: ProjectsType[] = [
     subtitle: "2013 - 2016",
     text: "This collaborative project spanned over a year building relationships between two artist studio groups with regular crit sessions, meetings and social events which culminated in a co-curated exhibition.",
     images: [
-      "/images/Projects/Support/support (1).jpg",
-      "/images/Projects/Support/support (2).jpg",
       "/images/Projects/Support/support (3).jpg",
-
+      "/images/Projects/Support/support (2).jpg",
+      "/images/Projects/Support/support (1).jpg",
     ],
     url: "/projects/support",
     collaboration: true,
@@ -345,8 +360,8 @@ export const projects: ProjectsType[] = [
       "/images/Projects/Women/women (2).jpg",
       "/images/Projects/Women/women (3).jpg",
       "/images/Projects/Women/women (4).jpg",
-      "/images/Projects/Women/women (5).jpg",
       "/images/Projects/Women/women (6).jpg",
+      "/images/Projects/Women/women (5).jpg",
     ],
     url: "/projects/women",
     collaboration: true,
@@ -358,12 +373,12 @@ export const projects: ProjectsType[] = [
     text: "Multiple projects and ventures emerged from this artist-led space. We worked together to run workshops, host events, co-ordinate exhibitions, and support artist development practice. Highlights include Sluice Art Fair; Space for Discussion, Talent Development bursary; ‘what does it mean to be an artist-led group?’, Doodle Days, Artist Pecha Kucha sessions, Summer Salon shows and new arts quarter development-site initiative: ‘Do you want art here or what?’ and ‘Ribbon People’.",
     images: [
       "/images/Projects/Unit11/unit11 (1).jpg",
-      "/images/Projects/Unit11/unit11 (1)-2.jpg",
-      "/images/Projects/Unit11/unit11 (2).jpg",
       "/images/Projects/Unit11/unit11 (3).jpg",
+      "/images/Projects/Unit11/unit11 (2).jpg",
+      "/images/Projects/Unit11/unit11 (1)-2.jpg",
       "/images/Projects/Unit11/unit11 (4).jpg",
-      "/images/Projects/Unit11/unit11 (5).jpg",
       "/images/Projects/Unit11/unit11 (6).jpg",
+      "/images/Projects/Unit11/unit11 (5).jpg",
       "/images/Projects/Unit11/unit11 (7).jpg",
     ],
     url: "/projects/unit11",
@@ -374,9 +389,7 @@ export const projects: ProjectsType[] = [
     title: "Conversations with passing friends",
     subtitle: "2009 - ongoing",
     text: "A series of works exploring relational complexity – marked from the body — the ruptures in communication which both inform and unform – the gaps, un-graspability and tensions in language, transience and connection –  of past and present – there and here – drawn through – drawn out – withdrawn – dynamics forming and falling away – always within and beyond self – the shifting landscape of relationships – drawings as acts of love and grief.",
-    images: [
-      "/images/Works/works (2).jpg"
-    ],
+    images: ["/images/Works/works (2).jpg"],
     url: "/projects/passing",
     collaboration: false,
   },
@@ -396,7 +409,6 @@ export const projects: ProjectsType[] = [
     collaboration: true,
   },
 ];
-
 
 export const photos: PhotoType[] = [
   {

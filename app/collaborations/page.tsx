@@ -15,7 +15,7 @@ const Collaborations = () => {
       className="w-full xs:p-4 md:p-8 lg:pt-20 xl:pt-20 xl:px-20  min-h-screen"
     >
       <div className="w-full flex justify-center">
-        <h1 className="text-center pt-24 md:pt-40 lg:pt-12 text-3xl lg:text-4xl p-2 md:p-6 font-light">
+        <h1 className="pt-24 md:pt-40 lg:pt-12 text-3xl lg:text-4xl p-2 md:p-6 font-light text-center tracking-tighter">
           Collaborations
         </h1>
       </div>

@@ -6,7 +6,7 @@ const Works = () => {
   return (
     <main id="Works" className="w-full xs:p-4 md:p-8 lg:pt-20 xl:pt-20 xl:px-20  min-h-screen">
     <div className="w-full flex justify-center">
-      <h1 className="text-center pt-24 md:pt-40 lg:pt-12 text-3xl lg:text-4xl p-2 md:p-6 font-light">Works on Paper/Fabric</h1>
+      <h1 className="pt-24 md:pt-40 lg:pt-12 text-3xl lg:text-4xl p-2 md:p-6 font-light text-center tracking-tighter">Works on Paper/Fabric</h1>
     </div>
     <div className="w-full mx-auto flex flex-col justify-center items-center xs:w-[90vw] md:p-8 lg:pt-20 xl:pt-20 xl:px-20 md:grid lg:grid-cols-2 ">
         {drawings.map((drawing) => (

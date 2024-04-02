@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
         className={`fixed w-full h-20 flex text-lg xl:text-2xl justify-end p-4 bg-neutral-200 z-[100] border-b-2 border-neutral-300`}
       >
         {/* Desktop nav */}
-        <div className="h-full fixed top-6 left-10">
+        <div className="fixed top-6 left-10">
           <Link className="hover:border-b" href="/" >
             Celeste Ingrams
           </Link>
