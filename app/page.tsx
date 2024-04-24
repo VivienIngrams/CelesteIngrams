@@ -4,6 +4,7 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import {photos} from "./data";
+import client from '../client.js';
 
 interface Photo {
   id: number;
@@ -48,3 +49,18 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
+export async function getStaticProps() {
+  const query = `*[_type == "homePage"][0] {
+    title,
+    description
+  }`;
+
+  const data = await client.fetch(query);
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
