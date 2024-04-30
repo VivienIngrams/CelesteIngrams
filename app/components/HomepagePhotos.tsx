@@ -1,40 +1,34 @@
-"use client";
 
-import client from "../../client.js";
+'use client'
+
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import React from "react";
 import Image from "next/image";
-import { photos } from "../data";
 
-// interface Photo {
-//   id: number;
-//   src: string;
-//   alt: string;
-// }
+
+
 type HomepagePhoto = {
   id: number
   src: string
   alt: string
 }
 
-export async function HomepagePhotos () {
+const HomepagePhotos: React.FC<{ photos: HomepagePhoto[] }> = ({ photos }) => {
   const [emblaRef, embla] = useEmblaCarousel(
     {
       loop: true,
     },
     [Autoplay()]
   );
-  // const homepagePhotos = await client.fetch<HomepagePhoto[]>(`*[_type == "homepagePhoto"]`)
 
   return (
     <div className="overflow-hidden " ref={emblaRef}>
       <div className="flex">
-        {photos.map((image: HomepagePhoto) => (
-        // {homepagePhotos.map((image: HomepagePhoto) => (
+        {photos.map((image: HomepagePhoto, index) => (
           <div
             className="relative flex justify-center items-center flex-none flex-wrap lg:flex-nowrap w-full m-5"
-            key={image.id}
+            key={index}
           >
             <div className="overflow-hidden flex justify-center items-center h-3/4 w-3/4">
               <Image
@@ -52,7 +46,7 @@ export async function HomepagePhotos () {
   );
 };
 
-
+export default HomepagePhotos;
 
 
 
