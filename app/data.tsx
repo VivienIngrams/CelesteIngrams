@@ -32,11 +32,11 @@ export const videosData: VideosType[] = [
     title: "Home comforts – (neither) here and/or there",
     url: "https://www.youtube.com/embed/TpwJ7esYsAQ",
   },
-  {
-    id: 2,
-    title: "Doorway Remains - I never left - through the door",
-    url: "https://www.youtube.com/embed/yvN2WMzMrbY",
-  },
+  // {
+  //   id: 2,
+  //   title: "Doorway Remains - I never left - through the door",
+  //   url: "https://www.youtube.com/embed/yvN2WMzMrbY",
+  // },
   {
     id: 3,
     title: "Spitting Teeth Back into Place ",
