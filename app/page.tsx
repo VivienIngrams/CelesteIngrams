@@ -4,13 +4,15 @@ import {client} from "../client.js";
 interface HomepagePhoto {
  title: string;
  imageUrl: string;
+  alt: string;
 }
 
 const Home: React.FC = async () => {
 
   const homepagePhotos = await client.fetch<HomepagePhoto[]>(`*[_type == "homepagePhoto"]{
     title,
-    "imageUrl": image.asset->url
+    "imageUrl": image.asset->url,
+    "alt": image.alt
   }`)
   console.log(homepagePhotos);
   return (

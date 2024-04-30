@@ -10,6 +10,7 @@ import Image from "next/image";
 interface HomepagePhoto {
   title: string;
   imageUrl: string;
+  alt: string;
  }
 
 const HomepagePhotos: React.FC<{ photos: HomepagePhoto[] }> = ({ photos }) => {
@@ -34,7 +35,7 @@ const HomepagePhotos: React.FC<{ photos: HomepagePhoto[] }> = ({ photos }) => {
                 height={700}
                 width={900}
                 className=""
-                alt={image.title}
+                alt={image.alt}
               />
             </div>
           </div>
@@ -47,37 +48,3 @@ const HomepagePhotos: React.FC<{ photos: HomepagePhoto[] }> = ({ photos }) => {
 export default HomepagePhotos;
 
 
-
-// type Post = {
-//   _id: string
-//   title?: string
-//   slug?: {
-//     current: string
-//   }
-// }
-// export async function HomepagePhotoIndex() {
-//   const homepagePhotos = await client.fetch<HomepagePhoto[]>(`*[_type == "homepagePhoto"]`)
-
-//   return (
-//     <div>
-//       {homepagePhotos.map((photo) => (
-//         <div key={photo.id}>
-//           <img src={photo.src} alt={photo.alt} />
-//         </div>
-//       ))}
-//     </div>
-//   )
-// }
-// export async function PostIndex() {
-//   const posts = await client.fetch<Post[]>(`*[_type == "post"]`)
-
-//   return (
-//     <ul>
-//       {posts.map((post) => (
-//         <li key={post._id}>
-//           <a href={post?.slug?.current ?? ""}>{post?.title}</a>
-//         </li>
-//       ))}
-//     </ul>
-//   )
-// }
