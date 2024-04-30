@@ -8,12 +8,32 @@ import Image from "next/image";
 
 
 
-type HomepagePhoto = {
-  id: number
-  src: string
-  alt: string
+interface HomepagePhoto {
+  homepagePhoto: {
+    _type: string;
+    alt: string;
+    asset: {
+      /* Define properties of the asset object */
+      /* Example: */
+      ref: string;
+      metadata: {
+        /* Define properties of the metadata object */
+        /* Example: */
+        dimensions: {
+          /* Define properties of the dimensions object */
+          /* Example: */
+          width: number;
+          height: number;
+        };
+      };
+    };
+  };
+  _createdAt: string;
+  _rev: string;
+  _type: string;
+  _id: string;
+  _updatedAt: string;
 }
-
 const HomepagePhotos: React.FC<{ photos: HomepagePhoto[] }> = ({ photos }) => {
   const [emblaRef, embla] = useEmblaCarousel(
     {
@@ -25,22 +45,22 @@ const HomepagePhotos: React.FC<{ photos: HomepagePhoto[] }> = ({ photos }) => {
   return (
     <div className="overflow-hidden " ref={emblaRef}>
       <div className="flex">
-        {photos.map((image: HomepagePhoto, index) => (
+        {/* {photos.map((image: HomepagePhoto, index) => (
           <div
             className="relative flex justify-center items-center flex-none flex-wrap lg:flex-nowrap w-full m-5"
             key={index}
           >
             <div className="overflow-hidden flex justify-center items-center h-3/4 w-3/4">
               <Image
-                src={image.src}
+                src={image.homepagePhoto.asset.ref}
                 height={700}
                 width={900}
                 className=""
-                alt={image.alt}
+                alt={image.homepagePhoto.alt}
               />
             </div>
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );

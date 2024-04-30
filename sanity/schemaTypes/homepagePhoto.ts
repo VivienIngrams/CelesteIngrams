@@ -1,24 +1,35 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: 'homepagePhoto',
-  title: 'Homepage Photo',
-  type: 'document',
+  name: "homepagePhoto",
+  title: "Homepage Photo",
+  type: "document",
   fields: [
     defineField({
-      name: 'homepagePhoto',
-      title: 'Homepage Carousel Photo',
-      type: 'image',
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+    }),
+    defineField({
+      name: "image",
+      title: "image",
+      type: "image",
       options: {
         hotspot: true,
       },
       fields: [
         {
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative Text',
-        }
-      ]
+          name: "alt",
+          type: "string",
+          title: "Alternative Text",
+        },
+      ],
     }),
-     ],
-})
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      media: 'image',
+    },
+  },
+});
