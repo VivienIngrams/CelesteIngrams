@@ -25,12 +25,13 @@ export async function HomepagePhotos () {
     },
     [Autoplay()]
   );
-  const homepagePhotos = await client.fetch<HomepagePhoto[]>(`*[_type == "homepagePhoto"]`)
+  // const homepagePhotos = await client.fetch<HomepagePhoto[]>(`*[_type == "homepagePhoto"]`)
 
   return (
     <div className="overflow-hidden " ref={emblaRef}>
       <div className="flex">
-        {homepagePhotos.map((image: HomepagePhoto) => (
+        {photos.map((image: HomepagePhoto) => (
+        // {homepagePhotos.map((image: HomepagePhoto) => (
           <div
             className="relative flex justify-center items-center flex-none flex-wrap lg:flex-nowrap w-full m-5"
             key={image.id}
