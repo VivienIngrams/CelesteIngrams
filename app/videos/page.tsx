@@ -27,10 +27,10 @@ console.log(videos);
       <div className="w-full mx-auto flex flex-col justify-center items-center xs:w-[90vw] md:p-8 lg:pt-12 xl:pt-20 xl:px-20 lg:grid lg:grid-cols-2">
         {videos.map((video, index) => (
           <div key={index} className="max-w-full my-4 mx-auto ">
-            <div className=" my-4 mx-auto ">
+            <div className="flex flex-col justify-center items-center my-4 mx-auto ">
               <iframe
                 src={video.url}
-                className=" h-auto w-[250px] xs:w-[330px] xs:h-[200px] md:w-[550px] md:h-[350px] lg:w-[400px] lg:h-[240px]  2xl:w-[550px] 2xl:h-[400px] 3xl:w-[650px] 3xl:h-[450px] "
+                className=" h-auto w-[250px] xs:w-[330px] xs:h-[200px] md:w-[550px] md:h-[350px] lg:w-[400px] lg:h-[240px]  2xl:w-[500px] 2xl:h-[400px] 3xl:w-[600px] 3xl:h-[450px] "
                 title={video.title}
                 loading="lazy"
               />

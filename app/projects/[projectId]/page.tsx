@@ -1,11 +1,37 @@
-"use client";
-
 import Image from "next/image";
 import { projects } from "../../data";
 import Link from "next/link";
 import youtubeIcon from "/public/Youtube.svg";
+import {client} from "../../../client";
 
-const Project = ({ params }: { params: { projectId: string } }) => {
+type ProjectsType = {
+  id: string;
+  title: string;
+  dates: string;
+  text: string;
+  text2?: string;
+  link?: { url: string; text: string };
+  videos?: { url: string; alt: string }[];
+  images: string[];
+  collaboration: boolean;
+};
+
+const Project = async ({ params }: { params: { projectId: string } }) => {
+
+  
+  const projects = await client.fetch<ProjectsType[]>(`*[_type == "project"]{
+    id,
+    title,
+    dates,
+    text,
+    text2,
+    link,
+    videos,
+    "images": images[].asset->url,
+    collaboration,
+  }`);
+console.log(projects)
+
   const currentIndex = projects.findIndex(
     (project) => project.id === params.projectId
   );
@@ -14,7 +40,7 @@ const Project = ({ params }: { params: { projectId: string } }) => {
     return <p>Project not found</p>;
   }
 
-  const { id, title, subtitle, text, images, videos, text2, link } =
+  const { id, title, dates, text, images, videos, text2, link } =
     projects[currentIndex];
 
   // Calculate indices for previous and next products
@@ -23,11 +49,11 @@ const Project = ({ params }: { params: { projectId: string } }) => {
 
   return (
     <main id={id} className="w-full p-4 md:p-8 xl:p-20 min-h-screen">
-      <div className="w-full flex flex-col items-center justify-center md:mx-12 lg:mx-20 xl:max-w-[60vw] xl:mx-auto">
+      <div className="w-full flex flex-col items-center justify-center md:mx-8  xl:max-w-[60vw] xl:mx-auto">
         <h1 className="pt-24 md:pt-40 lg:pt-20 text-3xl lg:text-4xl p-2 md:p-6 font-light text-center tracking-tighter">
           {title}
         </h1>
-        <h2 className="p-2 md:p-6">{subtitle}</h2>
+        <h2 className="p-2 md:p-6">{dates}</h2>
         <p className="max-w-full text-justify my-4">{text}</p>
         {text2 && <p className="text-justify my-4">{text2}</p>}
         {link && (
@@ -42,10 +68,10 @@ const Project = ({ params }: { params: { projectId: string } }) => {
         {videos ? (
           <div className="w-full flex flex-col justify-center items-center  lg:grid lg:grid-cols-2">
             {videos.map((video, index) => (
-              <div key={index} className=" my-4">
+              <div key={index} className="flex flex-col justify-center items-center my-4">
                 <iframe
                   src={video.url}
-                  className="h-auto w-[250px] xs:w-[330px] xs:h-[200px] md:w-[550px] md:h-[350px] lg:w-[300px] lg:h-[200px]  2xl:w-[550px] 2xl:h-[400px] 3xl:w-[650px] 3xl:h-[450px]"
+                  className="h-auto w-[250px] xs:w-[330px] xs:h-[200px] md:w-[550px] md:h-[350px] lg:w-[300px] lg:h-[200px]  2xl:w-[500px] 2xl:h-[400px] 3xl:w-[600px] 3xl:h-[450px]"
                   title={video.alt}
                   loading="lazy"
                 />
