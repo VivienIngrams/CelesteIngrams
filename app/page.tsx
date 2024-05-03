@@ -14,7 +14,7 @@ const Home: React.FC = async () => {
     "imageUrl": image.asset->url,
     "alt": image.alt
   }`)
-  console.log(homepagePhotos);
+  // console.log(homepagePhotos);
   return (
     <main className="w-full pt-24  lg:pt-20 xl:pt-20 xl:px-20 h-[95vh] flex justify-center items-center">
       <HomepagePhotos photos={homepagePhotos}/> 

@@ -27,7 +27,7 @@ const ContactForm: React.FC = () => {
     <form onSubmit={handleSubmit} className="w-full py-4">
         <div className="flex flex-col">
           <label htmlFor="name" className=" text-lg py-2">
-            Nome
+            Name
           </label>
           <input
             id="name"
@@ -60,7 +60,7 @@ const ContactForm: React.FC = () => {
           type="submit"
           className=" p-2 mt-8 text-lg shadow-md  shadow-gray-400  "
         >
-          Enviar mensagem
+          Send message
         </button>
       </div>
     </form>
