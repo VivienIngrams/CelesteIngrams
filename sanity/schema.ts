@@ -6,7 +6,8 @@ import post from './schemaTypes/post'
 import video from './schemaTypes/video'
 import homepagePhoto from './schemaTypes/homepagePhoto'
 import practice from './schemaTypes/practice'
+import project from './schemaTypes/project'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [post, video, category, blockContent, homepagePhoto, practice],
+  types: [post, video, category, blockContent, homepagePhoto, practice, project],
 }

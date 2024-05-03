@@ -120,10 +120,10 @@ export const projects: ProjectsType[] = [
     text: "This place-based research project generated a body of work responding to a significant place from my history which represented a turning point in my life. Revisiting through embodied practices of drawing, movement, writing, audio, photography and video generated an exploration of fragments of narrative and re-storying of somatic memory. Themes of transformation, transition, trauma and place attachment wove throughout the research generating dialogue and positing questions about care and community.",
     images: ["/images/Place-matters.png"],
     videos: [
-      {
-        url: "https://www.youtube.com/embed/yvN2WMzMrbY",
-        alt: "Doorway Remains - I never left - through the door",
-      },
+      // {
+      //   url: "https://www.youtube.com/embed/yvN2WMzMrbY",
+      //   alt: "Doorway Remains - I never left - through the door",
+      // },
       {
         url: "https://www.youtube.com/embed/TpwJ7esYsAQ",
         alt: "Home comforts – (neither) here and/or there",
@@ -132,10 +132,10 @@ export const projects: ProjectsType[] = [
         url: "https://www.youtube.com/embed/iWRAztrhRvE",
         alt: "Spitting Teeth Back into Place - again      ",
       },
-      {
-        url: "https://www.youtube.com/embed/5cHSnCvUo6I",
-        alt: "Spitting Teeth Back into Place - again",
-      },
+      // {
+      //   url: "https://www.youtube.com/embed/5cHSnCvUo6I",
+      //   alt: "Spitting Teeth Back into Place ",
+      // },
     ],
     url: "/projects/place",
     collaboration: false,
@@ -309,7 +309,7 @@ export const projects: ProjectsType[] = [
   {
     id: "conversations",
     title: "Drawing converstaions/ reflections",
-    subtitle: "20154- 2019",
+    subtitle: "2015- 2019",
     text: "This body of drawings explored mark-making as a means of reflection. Tracing forms of/within memory – from conversations – interactions and movement as a tool to re-collect, re-consider, re-flect, and re-member. It became a regular activity, spanning themes of relationships, journeys, and daily reflective practices.",
     images: [
       "/images/Projects/Conversations/conversations (1).jpg",

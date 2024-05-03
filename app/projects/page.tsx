@@ -1,10 +1,21 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { projects } from "../data";
+import {client} from "../../client";
 
-const Projects = () => {
+interface ProjectsType {
+  id: string;
+  title: string;
+  images: string;
+}
+
+const Projects: React.FC = async () => {
+
+  const projects = await client.fetch<ProjectsType[]>(`*[_type == "project"]{
+    id,
+    title,
+    "images": images[].asset->url
+  }`);
+console.log(projects)
   return (
     <main
       id="Projects"
@@ -17,7 +28,7 @@ const Projects = () => {
       </div>
       <div className="w-full pt-8 mx-auto flex flex-col justify-center items-start xs:w-[90vw] md:p-8 lg:pt-20 xl:pt-20 xl:px-20 md:grid md:grid-cols-2 xl:grid-cols-3 gap-8">
         {projects.map((project) => (
-          <Link href={project.url} key={project.id} className="mx-auto ">
+          <Link href={`/projects/${project.id}`} key={project.id} className="mx-auto ">
            
             <div className="relative h-[200px] w-[200px] xs:w-[300px] xs:h-[300px] 2xl:w-[350px] 2xl:h-[350px] ">
               <Image
