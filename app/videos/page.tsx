@@ -13,7 +13,7 @@ const Practice: React.FC = async () => {
     title,
     url,
       }`)
-console.log(videos);
+// console.log(videos);
   return (
     <main
       id="Videos"
