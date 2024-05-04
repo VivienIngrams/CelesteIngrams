@@ -9,5 +9,5 @@ import practice from './schemaTypes/practice'
 import project from './schemaTypes/project'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [ video,  blockContent, homepagePhoto, practice, project],
+  types: [ video, blockContent, homepagePhoto, practice, project],
 }

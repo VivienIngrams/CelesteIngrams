@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import {client} from "../../client";
-import { projects } from "../data";
+// import { projects } from "../data";
 
 interface ProjectsType {
   id: string;
@@ -11,12 +11,12 @@ interface ProjectsType {
 
 const Projects: React.FC = async () => {
 
-//   const projects = await client.fetch<ProjectsType[]>(`*[_type == "project"]{
-//     id,
-//     title,
-//     "images": images[].asset->url
-//   }`);
-// console.log(projects)
+  const projects = await client.fetch<ProjectsType[]>(`*[_type == "project"]{
+    id,
+    title,
+    "images": images[].asset->url
+  }`);
+console.log(projects)
   return (
     <main
       id="Projects"
