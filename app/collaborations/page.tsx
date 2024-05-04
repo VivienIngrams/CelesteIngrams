@@ -1,14 +1,25 @@
-"use client";
-
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { projects } from "../data";
+// import { projects } from "../data";
+import {client} from "../../client";
 
-const collabProjects = projects.filter((project) => project.collaboration === true);
 
-const Collaborations = () => {
+interface ProjectsType {
+  id: string;
+  title: string;
+  images: string;
+}
+
+// const collabProjects = projects.filter((project) => project.collaboration === true);
+
+const Collaborations: React.FC = async () => {
+
+  const collabProjects = await client.fetch<ProjectsType[]>(`*[_type == "project" && collaboration ] | order(_createdAt asc) {
+    id,
+    title,
+    "images": images[].asset->url
+  } `);
+console.log(collabProjects)
   return (
     <main
       id="Collaborations"
@@ -21,7 +32,7 @@ const Collaborations = () => {
       </div>
       <div className="w-full pt-8 mx-auto flex flex-col justify-center items-start xs:w-[90vw] md:p-8 lg:pt-20 xl:pt-20 xl:px-20 md:grid md:grid-cols-2 xl:grid-cols-3 gap-8">
         {collabProjects.map((project) => (
-          <Link href={project.url} key={project.id} className="mx-auto ">
+          <Link href={`/projects/${project.id}`} key={project.id} className="mx-auto ">
            
             <div className="relative h-[200px] w-[200px] xs:w-[300px] xs:h-[300px] 2xl:w-[350px] 2xl:h-[350px] ">
               <Image

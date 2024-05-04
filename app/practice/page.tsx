@@ -11,7 +11,7 @@ const Practice: React.FC = async () => {
     image: string;
   };
 
-  const practice = await client.fetch<PracticeType[]>(`*[_type == "practice"]{
+  const practice = await client.fetch<PracticeType[]>(`*[_type == "practice"] | order(order asc) {
     title,
     "image": image.asset->url,
     "text": image.text
