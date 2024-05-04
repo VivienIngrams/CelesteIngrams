@@ -11,11 +11,11 @@ interface ProjectsType {
 
 const Projects: React.FC = async () => {
 
-  const projects = await client.fetch<ProjectsType[]>(`*[_type == "project"]{
+  const projects = await client.fetch<ProjectsType[]>(`*[_type == "project"] | order(_createdAt asc) {
     id,
     title,
     "images": images[].asset->url
-  }`);
+  } `);
 console.log(projects)
   return (
     <main
