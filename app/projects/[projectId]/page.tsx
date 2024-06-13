@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { projects } from "../../data";
+// import { projects } from "../../data";
 import Link from "next/link";
 import youtubeIcon from "/public/Youtube.svg";
 import {client} from "../../../client";
@@ -13,7 +13,6 @@ type ProjectsType = {
   link?: { url: string; text: string };
   videos?: { url: string; alt: string }[];
   images: string[];
-  collaboration: boolean;
 };
 
 const Project = async ({ params }: { params: { projectId: string } }) => {
@@ -28,14 +27,20 @@ const Project = async ({ params }: { params: { projectId: string } }) => {
     link,
     videos,
     "images": images[].asset->url,
-    collaboration,
-  }`);
-console.log(projects)
+      }`,
+    {},
+  {
+    next: {
+      revalidate: 60,
+    },
+  });
+  
+console.log(params.projectId + "params")
 
   const currentIndex = projects.findIndex(
     (project) => project.id === params.projectId
   );
-
+console.log(currentIndex + "currentIndex")
   if (currentIndex === -1) {
     return <p>Project not found</p>;
   }

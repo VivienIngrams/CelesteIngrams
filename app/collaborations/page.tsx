@@ -19,7 +19,7 @@ const Collaborations: React.FC = async () => {
     title,
     "images": images[].asset->url
   } `);
-console.log(collabProjects)
+// console.log(collabProjects)
   return (
     <main
       id="Collaborations"
