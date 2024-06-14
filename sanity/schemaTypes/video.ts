@@ -15,6 +15,11 @@ export default defineType({
       title: "URL",
       type: "url",
     }),
+    defineField({
+      name: "date",
+      title: "Date of video creation",
+      type: "date",
+    }),
   ],
   preview: {
     select: {

@@ -6,14 +6,25 @@ import {client} from "../../client.js";
 interface VideosType {
   title: string;
   url: string;
+  date: string;
 }
 const Practice: React.FC = async () => {
 
   const videos = await client.fetch<VideosType[]>(`*[_type == "video"]{
     title,
     url,
+    date,
       }`)
-// console.log(videos);
+
+      const sortedVideoData = [...videos].sort((a, b) => {
+        const dateA = new Date(a.date).getTime();
+        const dateB = new Date(b.date).getTime();
+        return dateB - dateA;
+      });
+    
+      // Debugging: Log the sorted data
+      console.log("Sorted video Data:", sortedVideoData);
+
   return (
     <main
       id="Videos"
