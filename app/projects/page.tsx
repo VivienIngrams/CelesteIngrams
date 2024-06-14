@@ -15,7 +15,14 @@ const Projects: React.FC = async () => {
     id,
     title,
     "images": images[].asset->url
-  } `);
+  } `,
+  {},
+{
+  next: {
+    revalidate: 60,
+  },
+});
+
 console.log(projects)
   return (
     <main

@@ -14,8 +14,15 @@ const Practice: React.FC = async () => {
     title,
     url,
     date,
-      }`)
-
+      }`,
+      {},
+    {
+      next: {
+        revalidate: 60,
+      },
+    });
+    
+console.log("Videos:", videos);
       const sortedVideoData = [...videos].sort((a, b) => {
         const dateA = new Date(a.date).getTime();
         const dateB = new Date(b.date).getTime();
