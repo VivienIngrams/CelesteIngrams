@@ -36,7 +36,7 @@ const Practice: React.FC = async () => {
         </h1>
       </div>
       <div className="w-full mx-auto flex flex-col justify-center items-center xs:w-[90vw] md:p-8 lg:pt-12 xl:pt-20 xl:px-20 lg:grid lg:grid-cols-2">
-        {videos.map((video, index) => (
+        {sortedVideoData.map((video, index) => (
           <div key={index} className="max-w-full my-4 mx-auto ">
             <div className="flex flex-col justify-center items-center my-4 mx-auto ">
               <iframe
