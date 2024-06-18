@@ -6,7 +6,8 @@ import {client} from "../../client";
 interface ProjectsType {
   id: string;
   title: string;
-  images: string;
+  mainImage?: string;
+  image: string;
 }
 
 const Projects: React.FC = async () => {
@@ -14,7 +15,8 @@ const Projects: React.FC = async () => {
   const projects = await client.fetch<ProjectsType[]>(`*[_type == "project"] | order(_createdAt asc) {
     id,
     title,
-    "images": images[].asset->url
+    "mainImage": mainImage.asset->url,
+    "image": images[0].asset->url
   } `,
   {},
 {
@@ -40,7 +42,7 @@ console.log(projects)
            
             <div className="relative h-[200px] w-[200px] xs:w-[300px] xs:h-[300px] 2xl:w-[350px] 2xl:h-[350px] ">
               <Image
-                src={project.images[0]}
+                src={project.mainImage || project.image}
                 alt={project.title}
                 fill
                 sizes="40vw"
