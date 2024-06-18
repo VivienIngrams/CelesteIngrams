@@ -454,7 +454,7 @@ export const drawings: PhotoType[] = [
     id: 5,
     src: "/images/Works/works (3).jpg",
     alt: "Drawing",
-    height: "h-[50vh]", 
+    height: "h-[80vh]", 
    width: "md:w-[35vw]"
     
   },
@@ -462,29 +462,29 @@ export const drawings: PhotoType[] = [
     id: 1,
     src: "/images/Works/works (1).jpg",
     alt: "Drawing",
-    height: "h-[50vh]",
-   width: "md:w-[50vw]"
+    height: "h-[70vh]",
+   width: "md:w-[40vw]"
   },
 
   {
     id: 25,
     src: "/images/Works/works (13).jpg",
     alt: "Drawing",
-    height: "h-[50vh]",
+    height: "h-[45vh]",
     width: "md:w-[60vw]",
   },
   {
     id: 2,
     src: "/images/Works/works (1)-2.jpg",
     alt: "Drawing",
-    height: "h-[50vh]",
+    height: "h-[55vh]",
     width: "md:w-[60vw]",
   },
   {
     id: 4,
     src: "/images/Works/works (2)-2.jpg",
     alt: "Drawing",
-     height: "h-[50vh]",
+     height: "h-[45vh]",
    width: "md:w-[70vw]"
      },
 
@@ -492,7 +492,7 @@ export const drawings: PhotoType[] = [
     id: 7,
     src: "/images/Works/works (4).jpg",
     alt: "Drawing",
-     height: "h-[50vh]",
+     height: "h-[45vh]",
    width: "md:w-[70vw]"
    
   },
@@ -500,91 +500,91 @@ export const drawings: PhotoType[] = [
     id: 6,
     src: "/images/Works/works (3)-2.jpg",
     alt: "Drawing",
-     height: "h-[50vh]",
+     height: "h-[40vh]",
    width: "md:w-[70vw]"
     },
   {
     id: 8,
     src: "/images/Works/works (4)-2.jpg",
     alt: "Drawing",
-     height: "h-[50vh]",
+     height: "h-[65vh]",
    width: "md:w-[40vw]"
     },
   {
     id: 9,
     src: "/images/Works/works (5).jpg",
     alt: "Drawing",
-     height: "h-[50vh]",
+     height: "h-[80vh]",
    width: "md:w-[30vw]"
     },
   {
     id: 10,
     src: "/images/Works/works (5)-2.jpg",
     alt: "Drawing",
-     height: "h-[50vh]",
+     height: "h-[60vh]",
    width: "md:w-[50vw]"
     },
   {
     id: 13,
     src: "/images/Works/works (7).jpg",
     alt: "Drawing",
-     height: "h-[50vh]",
+     height: "h-[88vh]",
    width: "md:w-[30vw]"
     },
   {
     id: 14,
     src: "/images/Works/works (7)-2.jpg",
     alt: "Drawing",
-     height: "h-[50vh]",
+     height: "h-[60vh]",
    width: "md:w-[55vw]"
     },
   {
     id: 15,
     src: "/images/Works/works (8).jpg",
     alt: "Drawing",
-     height: "h-[50vh]",
+     height: "h-[115vh]",
    width: "md:w-[25vw]"
     },
   {
     id: 16,
     src: "/images/Works/works (8)-2.jpg",
     alt: "Drawing",
-     height: "h-[50vh]",
+     height: "h-[55vh]",
    width: "md:w-[50vw]"
     },
   {
     id: 17,
     src: "/images/Works/works (9).jpg",
     alt: "Drawing",
-     height: "h-[50vh]",
+     height: "h-[45vh]",
    width: "md:w-[80vw]"
     },
   {
     id: 18,
     src: "/images/Works/works (9)-2.jpg",
     alt: "Drawing",
-     height: "h-[50vh]",
+     height: "h-[70vh]",
    width: "md:w-[50vw]"
     },
   {
     id: 19,
     src: "/images/Works/works (10).jpg",
     alt: "Drawing",
-     height: "h-[50vh]",
+     height: "h-[80vh]",
    width: "md:w-[40vw]"
     },
   {
     id: 20,
     src: "/images/Works/works (10)-2.jpg",
     alt: "Drawing",
-     height: "h-[50vh]",
+     height: "h-[90vh]",
    width: "md:w-[40vw]"
     },
   {
     id: 21,
     src: "/images/Works/works (11).jpg",
     alt: "Drawing",
-     height: "h-[50vh]",
+     height: "h-[45vh]",
    width: "md:w-[80vw]"
     },
 
@@ -592,7 +592,7 @@ export const drawings: PhotoType[] = [
     id: 23,
     src: "/images/Works/works (12).jpg",
     alt: "Drawing",
-     height: "h-[50vh]",
+     height: "h-[80vh]",
    width: "md:w-[30vw]"
     },
 ];

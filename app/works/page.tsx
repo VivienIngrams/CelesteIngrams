@@ -16,7 +16,7 @@ const Works = () => {
       </div>
       <div className="w-full mx-auto flex flex-wrap justify-center items-start min-h-screen xs:w-[90vw] md:p-8 lg:pt-20 xl:pt-20 xl:px-10">
         {drawings.map((drawing) => (
-          <div key={drawing.id} className={`relative w-[80vw] ${drawing.height} ${drawing.width} md:h-[90vh]`}>
+          <div key={drawing.id} className={`relative w-[90vw] ${drawing.height} ${drawing.width} md:h-[90vh]`}>
             <Link href={drawing.src}>
               <div
                 className="relative h-full w-full"
