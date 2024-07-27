@@ -5,7 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import React from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 
 interface HomepagePhoto {
   title: string;
@@ -29,7 +29,7 @@ const HomepagePhotos: React.FC<{ photos: HomepagePhoto[] }> = ({ photos }) => {
             className="relative flex justify-center items-center flex-none flex-wrap lg:flex-nowrap w-full m-5"
             key={index}
           >
-            <div className="overflow-hidden flex justify-center items-center h-3/4 w-3/4">
+            <Link href="/projects" className="overflow-hidden flex justify-center items-center h-3/4 w-3/4">
               <Image
                 src={image.imageUrl}
                 height={700}
@@ -37,7 +37,7 @@ const HomepagePhotos: React.FC<{ photos: HomepagePhoto[] }> = ({ photos }) => {
                 className=""
                 alt={image.alt}
               />
-            </div>
+            </Link>
           </div>
         ))}
       </div>
