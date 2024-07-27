@@ -35,12 +35,12 @@ const Project = async ({ params }: { params: { projectId: string } }) => {
     },
   });
   
-console.log(params.projectId + "params")
+// console.log(params.projectId + "params")
 
   const currentIndex = projects.findIndex(
     (project) => project.id === params.projectId
   );
-console.log(currentIndex + "currentIndex")
+// console.log(currentIndex + "currentIndex")
   if (currentIndex === -1) {
     return <p>Project not found</p>;
   }
@@ -54,7 +54,7 @@ console.log(currentIndex + "currentIndex")
 
   return (
     <main id={id} className="w-full p-4 md:p-8 xl:p-20 min-h-screen">
-      <div className="w-full flex flex-col items-center justify-center md:mx-8  xl:max-w-[60vw] xl:mx-auto">
+      <div className="w-full flex flex-col items-center justify-center md:mx-8  xl:max-w-[70vw] xl:mx-auto">
         <h1 className="pt-24 md:pt-40 lg:pt-20 text-3xl lg:text-4xl p-2 md:p-6 font-light text-center tracking-tighter">
           {title}
         </h1>
@@ -76,7 +76,7 @@ console.log(currentIndex + "currentIndex")
               <div key={index} className="flex flex-col justify-center items-center my-4">
                 <iframe
                   src={video.url}
-                  className="h-auto w-[250px] xs:w-[330px] xs:h-[200px] md:w-[550px] md:h-[350px] lg:w-[300px] lg:h-[200px]  2xl:w-[500px] 2xl:h-[400px] 3xl:w-[600px] 3xl:h-[450px]"
+                  className=" h-auto w-[250px] xs:w-[330px] xs:h-[200px] md:w-[550px] md:h-[350px] lg:w-[370px] lg:h-[240px]  2xl:w-[470px] 2xl:h-[400px] 3xl:w-[560px] 3xl:h-[450px] "
                   title={video.alt}
                   loading="lazy"
                 />
@@ -84,7 +84,7 @@ console.log(currentIndex + "currentIndex")
             ))}
           </div>
         ) : (
-          <div className="lg:grid lg:grid-cols-2 gap-4">
+          <div className="lg:grid lg:grid-cols-2 gap-6">
             {images.map((image, index) => (
               <div
                 key={index}
