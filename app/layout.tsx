@@ -11,8 +11,8 @@ const ubuntu = Ubuntu({
   preload: false,
 });
 export const metadata: Metadata = {
-  title: "Celeste Herrera",
-  description: "Celeste Herrera",
+  title: "Celeste Burr Herrera",
+  description: "Celeste Burr Herrera",
 };
 
 export default function RootLayout({
