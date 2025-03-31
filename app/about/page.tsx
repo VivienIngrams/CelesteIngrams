@@ -5,7 +5,7 @@ const About = () => {
   return (
     <main id="About" className="w-full p-4 md:p-8 lg:pt-20 xl:pt-20 xl:px-20 h-screen lg:grid lg:grid-cols-2">
       <div className="lg:h-full pt-24 md:pt:40 lg:pt-12  flex flex-col justify-center items-center">
-        <Image src="/images/Celeste-facilitating.jpg" alt="Celeste Ingrams" width={500} height={500} />
+        <Image src="/images/Celeste-facilitating.jpg" alt="Celeste Herrera" width={500} height={500} />
       </div>
       <div className="lg:h-full text-justify flex flex-col justify-center items-center">
         <p className="my-4">

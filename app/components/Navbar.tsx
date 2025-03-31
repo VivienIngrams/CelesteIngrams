@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
         {/* Desktop nav */}
         <div className="fixed top-4 left-10">
           <Link className="hover:border-b" href="/" >
-            Celeste Ingrams
+            Celeste Herrera
           </Link>
         </div>
         <div className="relative flex items-center h-full">
@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
           <div className="w-full">
             <div className="relative flex w-full items-center justify-between z-200">
               <Link className="py-5 hover:border-b hover:text-blue-300" href="/" onClick={handleNav}>
-                Celeste Ingrams
+                Celeste Herrera
               </Link>
               <div
                 onClick={handleNav}

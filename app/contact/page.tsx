@@ -12,14 +12,14 @@ const Contact = () => {
       <div className="lg:h-full pt-24 md:pt:40 lg:pt-12  flex flex-col justify-center items-center">
         <Image
           src="/images/Profile.jpg"
-          alt="Celeste Ingrams"
+          alt="Celeste Hererra"
           width={300}
           height={500}
         />
       </div>
       <div className="lg:h-full  flex flex-col justify-center ">
-        <Link className="my-4 underline decoration-1" href="mailto:ingramsceleste@gmail.com" target="_blank">
-          ingramsceleste@gmail.com
+        <Link className="my-4 underline decoration-1" href="mailto:celesteburrherrera@gmail.com" target="_blank">
+          celesteburrherrera@gmail.com
         </Link>
         <p className="my-4">+44 7824805518</p>
         <p className="my-4 text-justify">
