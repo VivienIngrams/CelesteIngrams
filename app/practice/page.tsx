@@ -22,7 +22,7 @@ const Practice: React.FC = async () => {
       <div className="w-full flex justify-center">
         <h1 className="pt-24 md:pt-40 lg:pt-20 text-3xl lg:text-4xl p-2 md:p-6 font-light text-center tracking-tighter">Practice</h1>
       </div>
-      <div className="w-full flex flex-col items-center justify-center">
+      <div className="w-full flex flex-col items-center justify-center mx-auto">
         {practice.map(({ image, title, text }, index) => (
           <div
             key={index}

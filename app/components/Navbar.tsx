@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
         className={`fixed w-full h-16 flex text-lg 2xl:text-xl justify-end p-4 bg-neutral-200 z-[100] border-b-2 border-neutral-300`}
       >
         {/* Desktop nav */}
-        <div className="fixed top-4 left-10">
+        <div className="fixed top-4 left-6 md:left-10">
           <Link className="hover:border-b" href="/" >
             Celeste Burr Herrera
           </Link>
@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
         >
           <div className="w-full">
             <div className="relative flex w-full items-center justify-between z-200">
-              <Link className="py-5 hover:border-b hover:text-blue-300" href="/" onClick={handleNav}>
+              <Link className="p-5 hover:border-b hover:text-blue-300" href="/" onClick={handleNav}>
                 Celeste Burr Herrera
               </Link>
               <div

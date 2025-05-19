@@ -16,7 +16,7 @@ const Home: React.FC = async () => {
   }`)
   // console.log(homepagePhotos);
   return (
-    <main className="w-full pt-24  lg:pt-20 xl:pt-20 xl:px-20 h-[95vh] flex justify-center items-center">
+    <main className="w-full py-20 md:pb-0  xl:px-[10vw] h-[95vh] flex justify-center items-center">
       <HomepagePhotos photos={homepagePhotos}/> 
     </main>
   );

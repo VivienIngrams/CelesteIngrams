@@ -9,15 +9,16 @@ const Contact = () => {
       id="Contact"
       className="w-full p-4 md:p-8 lg:pt-20 xl:pt-20 xl:px-20 h-screen lg:grid lg:grid-cols-2"
     >
-      <div className="lg:h-full pt-24 md:pt:40 lg:pt-12  flex flex-col justify-center items-center">
+      <div className="lg:h-full pt-24 md:pt:40 lg:pt-12 flex flex-col justify-center items-center">
         <Image
           src="/images/Profile.jpg"
           alt="Celeste Hererra"
           width={300}
           height={500}
+          className="w-40 h-auto md:w-60 lg:w-[400px]" // Adjust sizes for different screen sizes
         />
       </div>
-      <div className="lg:h-full  flex flex-col justify-center ">
+      <div className="lg:h-full  flex flex-col justify-center xl:mr-24 ">
         <Link className="my-4 underline decoration-1" href="mailto:celesteburrherrera@gmail.com" target="_blank">
           celesteburrherrera@gmail.com
         </Link>

@@ -4,18 +4,18 @@ import Link from "next/link";
 
 const Workshops = () => {
   return (
-    <main id="workshops" className="w-full p-4 md:p-8 min-h-screen lg:pt-20 xl:pt-20 xl:px-20 ">
+    <main id="workshops" className="w-full xl:max-w-[70vw] xl:mx-auto p-4 md:p-8 min-h-screen lg:pt-20  ">
       <div className="w-full flex justify-center">
       <h1 className="pt-24 md:pt-40 lg:pt-12 text-3xl lg:text-4xl p-2 md:p-6 font-light text-center tracking-tighter">
           Workshops
         </h1>
       </div>
       <div className="w-full h-full ">
-        <div className="w-full lg:h-[40vh] xl:max-w-[60vw] xl:mx-auto my-4 flex flex-col justify-center items-center">
+        <div className="w-full lg:h-[40vh]  my-4 flex flex-col justify-center items-center">
           <Image
             src="/images/Workshops.jpg"
             alt="Workshops outdoors"
-            width={900}
+            width={1000}
             height={300}
           />
         </div>

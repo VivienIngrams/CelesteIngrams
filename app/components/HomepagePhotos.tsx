@@ -1,4 +1,3 @@
-
 'use client'
 
 import useEmblaCarousel from "embla-carousel-react";
@@ -26,15 +25,15 @@ const HomepagePhotos: React.FC<{ photos: HomepagePhoto[] }> = ({ photos }) => {
       <div className="flex">
         {photos.map((image: HomepagePhoto, index) => (
           <div
-            className="relative flex justify-center items-center flex-none flex-wrap lg:flex-nowrap w-full m-5"
+            className="relative mt-8 flex justify-center items-center flex-none w-full h-[90vh] " // Full screen for each slide
             key={index}
           >
-            <Link href="/projects" className="overflow-hidden flex justify-center items-center h-3/4 w-3/4">
+            <Link href="/projects" className="overflow-hidden w-full h-full">
               <Image
                 src={image.imageUrl}
                 height={700}
                 width={900}
-                className=""
+                className="w-full h-full object-cover" // Ensures the image covers the screen and is cropped as needed
                 alt={image.alt}
               />
             </Link>

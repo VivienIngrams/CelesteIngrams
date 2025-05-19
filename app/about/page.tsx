@@ -7,7 +7,7 @@ const About = () => {
       <div className="lg:h-full pt-24 md:pt:40 lg:pt-12  flex flex-col justify-center items-center">
         <Image src="/images/Celeste-facilitating.jpg" alt="Celeste Burr Herrera" width={500} height={500} />
       </div>
-      <div className="lg:h-full text-justify flex flex-col justify-center items-center">
+      <div className="lg:h-full text-justify flex flex-col justify-center items-center lg:mr-24">
         <p className="my-4">
           I am an artist and facilitator with a particular interest in the
           intersections between arts and health. Within my practice I work
