@@ -10,7 +10,9 @@ const Workshops = () => {
           Workshops
         </h1>
       </div>
-      <div className="w-full h-full ">
+     {/* Shared Width Container */}
+      <div className="w-full max-w-5xl mx-auto flex flex-col items-center">
+
         <div className="w-full lg:h-[40vh]  my-4 flex flex-col justify-center items-center">
           <Image
             src="/images/Workshops.jpg"
@@ -19,7 +21,7 @@ const Workshops = () => {
             height={300}
           />
         </div>
-        <div className="h-full md:mx-12 lg:mx-40 xl:max-w-[60vw] xl:mx-auto text-justify flex flex-col justify-center items-center">
+        <div className="h-full text-justify flex flex-col justify-center items-center">
           <p className="my-4">
             With over 10 years experience designing and running sessions, I am
             able to tailor workshops to suit the needs of different groups.
