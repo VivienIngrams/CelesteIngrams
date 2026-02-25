@@ -27,7 +27,7 @@ export async function POST(request) {
 
     const mail = await transporter.sendMail({
       from: email,
-      to: "vivingrams@gmail.com",
+      to: "celesteburrherrera@gmail.com",
       subject: `Update your mailing list!`,
       html: `
         <p>This person would like to be added to your mailing list: </p>
