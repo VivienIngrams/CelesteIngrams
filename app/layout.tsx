@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`min-h-screen ${ubuntu.variable} text-md xl:text-xl font-ubuntu text-neutral-500 bg-neutral-200`}>
+      <body className={`min-h-screen ${ubuntu.variable} text-md xl:text-lg font-ubuntu text-neutral-500 bg-neutral-200`}>
         <Navbar />
        {children}
       </body>

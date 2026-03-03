@@ -25,7 +25,7 @@ const HomepagePhotos: React.FC<{ photos: HomepagePhoto[] }> = ({ photos }) => {
       <div className="flex">
         {photos.map((image: HomepagePhoto, index) => (
           <div
-            className="relative mt-8 flex justify-center items-center flex-none w-full h-[90vh] " // Full screen for each slide
+            className="relative mt-4 flex justify-center items-center flex-none w-full h-[88vh] " // Full screen for each slide
             key={index}
           >
             <Link href="/projects" className="overflow-hidden w-full h-full">

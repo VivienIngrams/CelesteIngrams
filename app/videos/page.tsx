@@ -52,7 +52,7 @@ const Practice: React.FC = async () => {
               />
             </div>
             <div className="pb-4">
-              <h2 className="text-center text-xs xs:text-sm md:text-lg font-light">
+              <h2 className="text-center text-xs xs:text-sm md:text-base font-light">
                 {video.title}
               </h2>
             </div>
