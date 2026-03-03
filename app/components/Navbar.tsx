@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
       >
         {/* Desktop nav */}
         <div className="fixed top-4 left-6 md:left-10">
-          <Link className="hover:border-b hover:text-blue-300" href="/" >
+          <Link className="focus:border-blue-300 hover:text-blue-300" href="/" >
             Celeste Burr Herrera
           </Link>
         </div>
