@@ -11,9 +11,9 @@ const Contact = () => {
     >
       <div className="lg:h-full pt-24 md:pt:40 lg:py-12 flex flex-col justify-center items-center">
         <Image
-          src="/images/Profile.jpg"
+          src="/images/Celeste Burr-Herrera.png"
           alt="Celeste Hererra"
-          width={300}
+          width={500}
           height={500}
           className="w-40 h-auto md:w-60 lg:w-[350px]" // Adjust sizes for different screen sizes
         />
