@@ -10,30 +10,28 @@ interface HomepagePhoto {
   title: string;
   imageUrl: string;
   alt: string;
- }
+}
 
 const HomepagePhotos: React.FC<{ photos: HomepagePhoto[] }> = ({ photos }) => {
-  const [emblaRef, embla] = useEmblaCarousel(
-    {
-      loop: true,
-    },
+  const [emblaRef] = useEmblaCarousel(
+    { loop: true },
     [Autoplay()]
   );
 
   return (
-    <div className="overflow-hidden " ref={emblaRef}>
+    <div className="overflow-hidden" ref={emblaRef}>
       <div className="flex">
         {photos.map((image: HomepagePhoto, index) => (
           <div
-            className="relative mt-4 flex justify-center items-center flex-none w-full h-[88vh] " // Full screen for each slide
+            className="relative flex justify-center items-center flex-none w-full h-[65vh] md:h-[70vh]"
             key={index}
           >
-            <Link href="/projects" className="overflow-hidden w-full h-full">
+            <Link href="/projects" className="overflow-hidden w-full h-full block">
               <Image
                 src={image.imageUrl}
                 height={700}
                 width={900}
-                className="w-full h-full object-cover" // Ensures the image covers the screen and is cropped as needed
+                className="w-full h-full object-cover"
                 alt={image.alt}
               />
             </Link>
@@ -45,5 +43,3 @@ const HomepagePhotos: React.FC<{ photos: HomepagePhoto[] }> = ({ photos }) => {
 };
 
 export default HomepagePhotos;
-
-
