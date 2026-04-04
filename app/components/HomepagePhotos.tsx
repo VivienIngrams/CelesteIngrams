@@ -23,7 +23,7 @@ const HomepagePhotos: React.FC<{ photos: HomepagePhoto[] }> = ({ photos }) => {
       <div className="flex">
         {photos.map((image: HomepagePhoto, index) => (
           <div
-            className="relative flex justify-center items-center flex-none w-full h-[45vh] md:h-[70vh]"
+            className="relative flex justify-center items-center flex-none w-full h-[40vh] md:h-[70vh]"
             key={index}
           >
             <Link href="/projects" className="overflow-hidden w-full h-full block">
