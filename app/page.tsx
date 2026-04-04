@@ -24,7 +24,7 @@ const Home: React.FC = async () => {
 
       {/* Bio Statement */}
       <div className="w-full mt-10 md:mt-6 px-4 md:px-8 xl:px-0 flex justify-center">
-        <p className="text-sm md:text-base leading-relaxed tracking-wide text-neutral-500 text-center max-w-2xl">
+        <p className="text-sm md:text-base leading-relaxed tracking-wide text-neutral-500 text-center max-w-3xl">
           Multidisciplinary artist, facilitator and researcher working across
           video, drawing, and performance to explore care, connection, and power
           through lived experience and embodied practice.
