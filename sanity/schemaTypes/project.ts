@@ -31,6 +31,11 @@ export default defineType({
       type: "text",
     }),
     defineField({
+      name: "text3",
+      title: "Bottom Text",
+      type: "text",
+    }),
+    defineField({
       name: "link",
       title: "A Link?",
       type: "object",

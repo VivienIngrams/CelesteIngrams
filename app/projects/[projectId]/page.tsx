@@ -10,6 +10,7 @@ type ProjectsType = {
   dates: string;
   text: string;
   text2?: string;
+  text3?: string;
   link?: { url: string; text: string };
   videos?: { url: string; alt: string }[];
   images: string[];
@@ -24,6 +25,7 @@ const Project = async ({ params }: { params: { projectId: string } }) => {
     dates,
     text,
     text2,
+    text3,
     link,
     videos,
     "images": images[].asset->url,
@@ -45,7 +47,7 @@ const Project = async ({ params }: { params: { projectId: string } }) => {
     return <p>Project not found</p>;
   }
 
-  const { id, title, dates, text, images, videos, text2, link } =
+  const { id, title, dates, text, images, videos, text2, text3, link } =
     projects[currentIndex];
 
   // Calculate indices for previous and next products
@@ -70,35 +72,39 @@ const Project = async ({ params }: { params: { projectId: string } }) => {
           </Link>
         )}
 
-        {videos ? (
-          <div className="w-full flex flex-col justify-center items-center  lg:grid lg:grid-cols-2">
-            {videos.map((video, index) => (
-              <div key={index} className="flex flex-col justify-center items-center my-4">
-                <iframe
-                  src={video.url}
-                  className=" h-auto w-[250px] xs:w-[330px] xs:h-[200px] md:w-[550px] md:h-[350px] lg:w-[370px] lg:h-[240px]  2xl:w-[470px] 2xl:h-[400px] 3xl:w-[560px] 3xl:h-[450px] "
-                  title={video.alt}
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="lg:grid lg:grid-cols-2 gap-6">
-            {images.map((image, index) => (
-              <div
-                key={index}
-                className={`my-2 md:my-4 flex justify-center items-center ${
-                  index === images.length - 1 && (index + 1) % 2 !== 0
-                    ? "lg:col-span-2"
-                    : ""
-                }`}
-              >
-                <Image src={image} alt={title} width={500} height={500} />
-              </div>
-            ))}
-          </div>
-        )}
+       {videos && videos.length > 0 && (
+  <div className="w-full flex flex-col justify-center items-center lg:grid lg:grid-cols-2">
+    {videos.map((video, index) => (
+      <div key={index} className="flex flex-col justify-center items-center my-4">
+        <iframe
+          src={video.url}
+          className=" h-auto w-[250px] xs:w-[330px] xs:h-[200px] md:w-[550px] md:h-[350px] lg:w-[370px] lg:h-[240px]  2xl:w-[470px] 2xl:h-[400px] 3xl:w-[560px] 3xl:h-[450px] "
+          title={video.alt}
+          loading="lazy"
+        />
+      </div>
+    ))}
+  </div>
+)}
+
+{images && images.length > 0 && (
+  <div className="lg:grid lg:grid-cols-2 gap-6">
+    {images.map((image, index) => (
+      <div
+        key={index}
+        className={`my-2 md:my-4 flex justify-center items-center ${
+          index === images.length - 1 && (index + 1) % 2 !== 0
+            ? "lg:col-span-2"
+            : ""
+        }`}
+      >
+        <Image src={image} alt={title} width={500} height={500} />
+      </div>
+    ))}
+  </div>
+)}
+
+        {text3 && <p className="text-justify my-4">{text3}</p>}
 
         {/* Nav buttons */}
         <div className="w-full flex justify-between">
