@@ -14,7 +14,7 @@ interface ProjectsType {
 
 const Collaborations: React.FC = async () => {
 
-  const collabProjects = await client.fetch<ProjectsType[]>(`*[_type == "project" && collaboration ] | order(_createdAt asc) {
+  const collabProjects = await client.fetch<ProjectsType[]>(`*[_type == "project" && collaboration ] | order(dates desc, _createdAt desc) {
     id,
     title,
     "images": images[].asset->url

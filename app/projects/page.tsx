@@ -13,7 +13,7 @@ interface ProjectsType {
 }
 
 const Projects: React.FC = async () => {
-  const projects = await client.fetch<ProjectsType[]>(`*[_type == "project"] | order(_createdAt asc) {
+  const projects = await client.fetch<ProjectsType[]>(`*[_type == "project"] | order(dates desc, _createdAt desc) {
     id,
     title,
     mainImage,
