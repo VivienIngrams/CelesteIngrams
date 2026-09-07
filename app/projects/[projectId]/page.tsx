@@ -11,7 +11,7 @@ type ProjectsType = {
   text: string;
   text2?: string;
   text3?: string;
-  link?: { url: string; text: string };
+  links?: { url: string; title: string; text: string; image?: any }[];
   videos?: { url: string; alt: string }[];
   images: string[];
 };
@@ -26,7 +26,7 @@ const Project = async ({ params }: { params: { projectId: string } }) => {
     text,
     text2,
     text3,
-    link,
+    links,
     videos,
     "images": images[].asset->url,
       }`,
@@ -47,7 +47,7 @@ const Project = async ({ params }: { params: { projectId: string } }) => {
     return <p>Project not found</p>;
   }
 
-  const { id, title, dates, text, images, videos, text2, text3, link } =
+  const { id, title, dates, text, images, videos, text2, text3, links } =
     projects[currentIndex];
 
   // Calculate indices for previous and next products
@@ -63,13 +63,31 @@ const Project = async ({ params }: { params: { projectId: string } }) => {
         <h2 className="p-2 md:p-6">{dates}</h2>
         <p className="max-w-full text-justify my-4">{text}</p>
         {text2 && <p className="text-justify my-4">{text2}</p>}
-        {link && (
-          <Link className="py-2 flex underline decoration-1" href={link.url}>
-            <div className="relative h-4 xs:h-6 xl:h-7 w-4 xs:w-8 xl:w-9 xl:mb-1 mr-[9px] xl:mr-5">
-            <Image priority src={youtubeIcon} alt="Youtube" fill />
-            </div>
-            {link.text}
-          </Link>
+        {links && links.length > 0 && (
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+            {links.map((link, index) => (
+              <Link
+                key={index}
+                href={link.url}
+                className="flex flex-col h-full border border-gray-300 hover:border-gray-500 transition rounded overflow-hidden"
+              >
+                {link.image && (
+                  <div className="relative w-full h-48">
+                    <Image
+                      src={link.image}
+                      alt={link.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+                <div className="p-4 flex flex-col flex-grow">
+                  <h3 className="text-lg font-semibold mb-2">{link.title}</h3>
+                  <p className="text-sm text-gray-600 flex-grow">{link.text}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
         )}
 
        {videos && videos.length > 0 && (

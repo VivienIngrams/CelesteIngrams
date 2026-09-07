@@ -36,12 +36,26 @@ export default defineType({
       type: "text",
     }),
     defineField({
-      name: "link",
-      title: "A Link?",
-      type: "object",
-      fields: [
-        { name: "url", type: "string", title: "URL" },
-        { name: "text", type: "string", title: "Text" },
+      name: "links",
+      title: "Links",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "url", type: "string", title: "URL" },
+            { name: "title", type: "string", title: "Title" },
+            { name: "text", type: "text", title: "Description" },
+            {
+              name: "image",
+              type: "image",
+              title: "Image",
+              options: {
+                hotspot: true,
+              },
+            },
+          ],
+        },
       ],
     }),
     defineField({
