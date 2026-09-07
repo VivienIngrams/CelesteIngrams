@@ -11,7 +11,7 @@ interface ProjectsType {
 }
 
 const Projects: React.FC = async () => {
-  const projects = await client.fetch<ProjectsType[]>(`*[_type == "project"] | order(dates desc, _createdAt desc) {
+  const projects = await client.fetch<ProjectsType[]>(`*[_type == "project" && displayOnProjectsPage == true] | order(dates desc, _createdAt desc) {
     id,
     title,
     "mainImage": mainImage.asset->url,

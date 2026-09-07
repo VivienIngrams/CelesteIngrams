@@ -79,7 +79,6 @@ export default defineType({
       options: {
         hotspot: true,
       },
-      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "images",
@@ -99,6 +98,15 @@ export default defineType({
       name: "collaboration",
       title: "Collaboration",
       type: "boolean",
+            description: "Toggle to show/hide this project on the Collaborations page",
+      initialValue: false,
+    }),
+    defineField({
+      name: "displayOnProjectsPage",
+      title: "Display on Projects Page",
+      type: "boolean",
+      description: "Toggle to show/hide this project on the main projects page",
+      initialValue: true,
     }),
   ],
 
