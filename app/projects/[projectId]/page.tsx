@@ -11,7 +11,7 @@ type ProjectsType = {
   text: string;
   text2?: string;
   text3?: string;
-  links?: { url: string; title: string; text: string; image?: any }[];
+  links?: { url: string; title: string; text: string; image?: string }[];
   videos?: { url: string; alt: string }[];
   images: string[];
 };
@@ -26,7 +26,12 @@ const Project = async ({ params }: { params: { projectId: string } }) => {
     text,
     text2,
     text3,
-    links,
+    links[]{
+      url,
+      title,
+      text,
+      "image": image.asset->url
+    },
     videos,
     "images": images[].asset->url,
       }`,
