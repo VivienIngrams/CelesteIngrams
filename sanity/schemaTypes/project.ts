@@ -23,21 +23,25 @@ export default defineType({
       title: "Dates",
       type: "string",
     }),
+       defineField({
+      name: "mainImage",
+      title: "Main Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    }),
     defineField({
       name: "text",
       title: "Text",
-      type: "text",
+      type: "blockContent",
     }),
     defineField({
       name: "text2",
       title: "Additional Text",
-      type: "text",
+      type: "blockContent",
     }),
-    defineField({
-      name: "text3",
-      title: "Bottom Text",
-      type: "text",
-    }),
+  
     defineField({
       name: "links",
       title: "Links",
@@ -75,14 +79,7 @@ export default defineType({
         },
       ],
     }),
-    defineField({
-      name: "mainImage",
-      title: "Main Image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-    }),
+ 
     defineField({
       name: "images",
       title: "Images",
@@ -96,7 +93,11 @@ export default defineType({
         },
       ],
     }),
-
+  defineField({
+      name: "text3",
+      title: "Bottom Text",
+      type: "blockContent",
+    }),
     defineField({
       name: "collaboration",
       title: "Display on Collaborations Page",

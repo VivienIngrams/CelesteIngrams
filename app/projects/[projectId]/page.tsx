@@ -1,18 +1,42 @@
 import Image from "next/image";
 // import { projects } from "../../data";
 import Link from "next/link";
-import {client} from "../../../client";
+import { PortableText, type PortableTextComponents } from "@portabletext/react";
+import { client } from "../../../client";
+
+const richTextComponents: PortableTextComponents = {
+  block: {
+    normal: ({ children }) => <p className="max-w-full text-justify my-4">{children}</p>,
+  },
+  marks: {
+    link: ({ children, value }) => (
+      <a href={value?.href} target="_blank" rel="noreferrer" className="underline">
+        {children}
+      </a>
+    ),
+  },
+};
 
 type ProjectsType = {
   id: string;
   title: string;
   dates: string;
-  text: string;
-  text2?: string;
-  text3?: string;
+  text?: any[] | string;
+  text2?: any[] | string;
+  text3?: any[] | string;
   links?: { url: string; title: string; text: string; image?: string }[];
   videos?: { url: string; alt: string }[];
   images: string[];
+};
+
+const renderText = (content: any[] | string | undefined) => {
+  if (!content) return null;
+
+  if (typeof content === "string") {
+    return <p className="max-w-full text-justify my-4">{content}</p>;
+  }
+
+  return <PortableText value={content} components={richTextComponents} />;
 };
 
 const Project = async ({ params }: { params: { projectId: string } }) => {
@@ -65,8 +89,8 @@ const Project = async ({ params }: { params: { projectId: string } }) => {
           {title}
         </h1>
         <h2 className="p-2 md:p-6">{dates}</h2>
-        <p className="max-w-full text-justify my-4">{text}</p>
-        {text2 && <p className="text-justify my-4">{text2}</p>}
+        {renderText(text)}
+        {text2 && renderText(text2)}
         {links && links.length > 0 && (
           <div className="w-full grid grid-cols-1 gap-6 my-6 max-w-xl">
             {links.map((link, index) => (
@@ -126,7 +150,7 @@ const Project = async ({ params }: { params: { projectId: string } }) => {
   </div>
 )}
 
-        {text3 && <p className="text-justify my-4">{text3}</p>}
+        {text3 && renderText(text3)}
 
         {/* Nav buttons */}
         <div className="w-full flex justify-between">
