@@ -9,11 +9,14 @@ export default defineType({
       name: "id",
       title: "ID",
       type: "string",
+      validation: (Rule) => Rule.required().error("ID is required"),
     }),
     defineField({
       name: "title",
       title: "Title",
       type: "string",
+      validation: (Rule) => Rule.required().error("Title is required"),
+
     }),
     defineField({
       name: "dates",
@@ -43,7 +46,7 @@ export default defineType({
         {
           type: "object",
           fields: [
-            { name: "url", type: "string", title: "URL" },
+            { name: "url", type: "string", title: "URL (can be external or internal)" , validation: (Rule) => Rule.required().error("URL link is required" ) },
             { name: "title", type: "string", title: "Title" },
             { name: "text", type: "text", title: "Description" },
             {
@@ -66,7 +69,7 @@ export default defineType({
         {
           type: "object",
           fields: [
-            { name: "url", type: "string", title: "URL" },
+            { name: "url", type: "string", title: "URL (can be external or internal)", validation: (Rule) => Rule.required().error("Video URL is required"), },
             { name: "alt", type: "string", title: "Alternative Text" },
           ],
         },
@@ -96,7 +99,7 @@ export default defineType({
 
     defineField({
       name: "collaboration",
-      title: "Collaboration",
+      title: "Display on Collaborations Page",
       type: "boolean",
             description: "Toggle to show/hide this project on the Collaborations page",
       initialValue: false,
@@ -105,7 +108,7 @@ export default defineType({
       name: "displayOnProjectsPage",
       title: "Display on Projects Page",
       type: "boolean",
-      description: "Toggle to show/hide this project on the main projects page",
+      description: "Toggle to show/hide this project on the main Projects page",
       initialValue: true,
     }),
   ],

@@ -1,7 +1,6 @@
 import Image from "next/image";
 // import { projects } from "../../data";
 import Link from "next/link";
-import youtubeIcon from "/public/Youtube.svg";
 import {client} from "../../../client";
 
 type ProjectsType = {
@@ -69,15 +68,15 @@ const Project = async ({ params }: { params: { projectId: string } }) => {
         <p className="max-w-full text-justify my-4">{text}</p>
         {text2 && <p className="text-justify my-4">{text2}</p>}
         {links && links.length > 0 && (
-          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+          <div className="w-full grid grid-cols-1 gap-6 my-6 max-w-xl">
             {links.map((link, index) => (
               <Link
                 key={index}
                 href={link.url}
-                className="flex flex-col h-full border border-gray-300 hover:border-gray-500 transition rounded overflow-hidden"
+                className="flex items-center gap-4 h-full border border-gray-300 hover:border-gray-500 transition rounded p-3"
               >
                 {link.image && (
-                  <div className="relative w-full h-48">
+                  <div className="relative w-20 h-20 shrink-0 overflow-hidden rounded-md border border-gray-200 bg-gray-50">
                     <Image
                       src={link.image}
                       alt={link.title}
@@ -86,9 +85,9 @@ const Project = async ({ params }: { params: { projectId: string } }) => {
                     />
                   </div>
                 )}
-                <div className="p-4 flex flex-col flex-grow">
-                  <h3 className="text-lg font-semibold mb-2">{link.title}</h3>
-                  <p className="text-sm text-gray-600 flex-grow">{link.text}</p>
+                <div className="flex flex-col min-w-0 flex-grow">
+                  <h3 className="text-lg font-semibold mb-1">{link.title}</h3>
+                  <p className="text-sm text-gray-600">{link.text}</p>
                 </div>
               </Link>
             ))}

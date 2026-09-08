@@ -36,16 +36,22 @@ const Projects: React.FC = async () => {
         {projects.map((project) => {
           const displayImage = project.mainImage || (project.images && project.images[0]);
           return (
-            <Link href={`/projects/${project.id}`} key={project.id} className="mx-auto  select-none ">
-              <div className="relative h-[200px] w-[200px] xs:w-[300px] xs:h-[300px] 2xl:w-[350px] 2xl:h-[350px]">
-                <NextImage
-                  src={displayImage}
-                  alt={project.title}
-                  fill
-                  sizes="80vw md:30vw"
-                  className="object-cover object-center w-full h-full"
-                />
-              </div>
+            <Link href={`/projects/${project.id}`} key={project.id} className="mx-auto select-none">
+              {displayImage ? (
+                <div className="relative h-[200px] w-[200px] xs:w-[300px] xs:h-[300px] 2xl:w-[350px] 2xl:h-[350px]">
+                  <NextImage
+                    src={displayImage}
+                    alt={project.title}
+                    fill
+                    sizes="80vw md:30vw"
+                    className="object-cover object-center w-full h-full"
+                  />
+                </div>
+              ) : (
+                <div className="flex items-center justify-center h-[200px] w-[200px] xs:w-[300px] xs:h-[300px] 2xl:w-[350px] 2xl:h-[350px] bg-gray-100 text-xs uppercase tracking-[0.2em] text-gray-500">
+                  No image
+                </div>
+              )}
               <div className="mt-1 w-[200px] xs:w-[300px] 2xl:w-[350px]">
                 <h2 className="text-xs xs:text-sm md:text-base font-light">
                   {project.title}
