@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "../../components/SanityImage";
 // import { projects } from "../../data";
 import Link from "next/link";
 import { PortableText, type PortableTextComponents } from "@portabletext/react";

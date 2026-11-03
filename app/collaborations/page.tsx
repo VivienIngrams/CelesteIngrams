@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "../components/SanityImage";
 import Link from "next/link";
 // import { projects } from "../data";
 import {client} from "../../client";
